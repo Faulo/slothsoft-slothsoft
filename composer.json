@@ -12,7 +12,7 @@
     "type": "library",
     "require": {
 		"php": ">=7.0",
-		"slothsoft/farah" : "*"
+		"slothsoft/farah" : "*",
 		"slothsoft/chat" : "*"
     },
 	"require-dev": {
