@@ -4,3 +4,4 @@ composer.lock
 
 #resources
 !/res/fonts/
+!/res/staff/
