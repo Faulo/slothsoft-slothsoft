@@ -21,11 +21,5 @@
         "psr-4": {
             "Slothsoft\\Slothsoft\\": "php/"
         }
-    },
-	"repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/Faulo/slothsoft-farah"
-        }
-    ]
+    }
 }
