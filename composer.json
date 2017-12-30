@@ -1,6 +1,6 @@
 {
 	"name" : "slothsoft/slothsoft",
-	"description" : "Content of slothsoft.net.",
+	"description" : "A Farah module containing the content of slothsoft.net.",
 	"license" : "WTFPL",
 	"authors" : [{
 			"name" : "Daniel Schulz",

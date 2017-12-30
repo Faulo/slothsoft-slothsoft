@@ -1,4 +1,4 @@
-Files and Resources and Hypertext
-=================================
+Slothsoft
+=========
 
-A Farah module.
+A Farah module containing the content of slothsoft.net.
