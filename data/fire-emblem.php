@@ -2,6 +2,7 @@
 namespace Slothsoft\Farah;
 
 use Slothsoft\FireEmblem\Game;
+
 $gameKey = $this->httpRequest->getInputValue('game');
 if (! $gameKey) {
     return null;
