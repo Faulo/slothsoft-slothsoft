@@ -1,391 +1,400 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module>
+<module xmlns="http://schema.slothsoft.net/farah/module">
+<assets>
+	<resource-directory name="data" path="data" type="application/x-php"/>
+	<resource-directory name="css" path="stylesheet" type="text/css"/>
+	<resource-directory name="js" path="script" type="application/javascript"/>
+	<resource-directory name="xsl" path="template" type="application/xslt+xml"/>
+	
+	
 	<fragment name="empty">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 	</fragment>
 
 	<fragment name="bahn">
 		<param name="standalone" scope="global" />
-		<template name="_bahn" />
-		<data name="bahn" />
+		<use-template ref="xsl/_bahn" />
+		<use-data ref="data/bahn" />
 	</fragment>
 
 	<fragment name="slothsoft-chat">
 		<param name="chat-database" value="slothsoft" />
-		<template name="/chat/shoutbox" />
-		<call name="/chat/default" as="chat" />
+		<use-template ref="//chat/xsl/shoutbox" />
+		<use-data ref="//chat/default" as="chat" />
 	</fragment>
 
 	<fragment name="missing-sloth-chat">
 		<param name="chat-database" value="missingsloth" />
-		<template name="/chat/shoutbox" />
-		<call name="/chat/default" as="chat" />
+		<use-template ref="xsl//chat/shoutbox" />
+		<use-data ref="//chat/default" as="chat" />
 	</fragment>
 
 	<fragment name="archive-chat">
 		<param name="chat-database" value="archive" />
-		<template name="/chat/shoutbox" />
-		<call name="/chat/default" as="chat" />
+		<use-template ref="xsl//chat/shoutbox" />
+		<use-data ref="//chat/default" as="chat" />
 	</fragment>
 
 	<fragment name="home">
-		<struc name="default" />
+		<include-fragment ref="default" />
 		<fragment name="content">
-			<template name="home" />
+			<use-template ref="xsl/home" />
 		</fragment>
-		<call name="slothsoft-chat" as="chat" />
+		<use-data ref="slothsoft-chat" as="chat" />
 	</fragment>
 
 	<fragment name="about-us">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="about-us" />
+			<use-template ref="xsl/about-us" />
 			<resDir name="staff" load="xml" />
 		</fragment>
 	</fragment>
 
 	<fragment name="missingSloth">
-		<struc name="default" />
-		<call name="/extensions/home-missingSloth" as="content" />
-		<call name="missing-sloth-chat" as="chat" />
+		<include-fragment ref="/default" />
+		<use-data ref="//extensions/home-missingSloth" as="content" />
+		<use-data ref="/missing-sloth-chat" as="chat" />
 	</fragment>
 
 	<fragment name="chat-list">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="chat-list" />
-			<call name="slothsoft-chat" as="chat" />
-			<call name="/minecraft/chat" as="chat" />
-			<call name="/amber/chat" as="chat" />
-			<call name="/talesof/chat" as="chat" />
-			<call name="fire-emblem-chat" as="chat" />
-			<call name="missing-sloth-chat" as="chat" />
+			<use-template ref="xsl/chat-list" />
+			<use-data ref="/slothsoft-chat" as="chat" />
+			<use-data ref="//minecraft/chat" as="chat" />
+			<use-data ref="//amber/chat" as="chat" />
+			<use-data ref="//talesof/chat" as="chat" />
+			<use-data ref="/fire-emblem-chat" as="chat" />
+			<use-data ref="/missing-sloth-chat" as="chat" />
 		</fragment>
 	</fragment>
 
 	<fragment name="imprint">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="address" />
+			<use-template ref="xsl/address" />
 			<res name="owner" load="xml" />
 		</fragment>
 	</fragment>
 
 
 	<fragment name="navi">
-		<template name="navi" />
-		<res name="/core/sites" load="xml" />
+		<use-template ref="xsl/navi" />
+		<use-data ref="//core/sites" load="xml" />
 	</fragment>
 
 	<fragment name="pc">
 		<param name="standalone" scope="global" />
-		<template name="_pc" />
-		<data name="pc" />
-		<style name="default" />
-		<style name="fonts" />
-		<script name="/core/html5" />
+		<use-template ref="xsl/_pc" />
+		<use-data ref="data/pc" />
+		<use-stylesheet ref="css/default" />
+		<use-stylesheet ref="css/fonts" />
+		<use-script ref="js//core/html5" />
 	</fragment>
 
 	<fragment name="validator">
-		<template name="w3c.validator" />
+		<use-template ref="xsl/w3c.validator" />
 	</fragment>
 	<fragment name="dict.select">
-		<template name="dict.select" />
+		<use-template ref="xsl/dict.select" />
+		<!--
 		<res name="lang-de-de" load="xml" />
 		<res name="lang-en-us" load="xml" />
+		-->
 	</fragment>
 
 	<fragment name="downloads">
-		<template name="_downloads" />
-		<style name="default" />
-		<style name="layout" />
-		<style name="fonts" />
-		<data name="downloads" />
+		<use-template ref="xsl/_downloads" />
+		<use-stylesheet ref="css/default" />
+		<use-stylesheet ref="css/layout" />
+		<use-stylesheet ref="css/fonts" />
+		<use-data ref="data/downloads" />
 	</fragment>
 	<fragment name="archive">
-		<template name="_archive" />
-		<data name="archive" />
-		<style name="default" />
-		<style name="layout" />
-		<style name="fonts" />
-		<style name="colors" />
-		<style name="archive" />
-		<struc name="/sse/script" />
-		<script name="Unison" />
-		<call name="archive-chat" as="chat" />
-		<script name="/core/HTML5" />
+		<use-template ref="xsl/_archive" />
+		<use-data ref="data/archive" />
+		<use-stylesheet ref="css/default" />
+		<use-stylesheet ref="css/layout" />
+		<use-stylesheet ref="css/fonts" />
+		<use-stylesheet ref="css/colors" />
+		<use-stylesheet ref="css/archive" />
+		<include-fragment ref="//sse/script" />
+		<use-script ref="js/Unison" />
+		<use-data ref="/archive-chat" as="chat" />
+		<use-script ref="js//core/HTML5" />
 	</fragment>
 	<fragment name="archive-hentai">
-		<template name="_archive.hentai" />
-		<data name="archive.hentai" />
-		<style name="default" />
-		<style name="layout" />
-		<style name="fonts" />
-		<style name="colors" />
-		<style name="archive" />
+		<use-template ref="xsl/_archive.hentai" />
+		<use-data ref="data/archive.hentai" />
+		<use-stylesheet ref="css/default" />
+		<use-stylesheet ref="css/layout" />
+		<use-stylesheet ref="css/fonts" />
+		<use-stylesheet ref="css/colors" />
+		<use-stylesheet ref="css/archive" />
 	</fragment>
 	<fragment name="archive-manga">
-		<template name="_archive.hentai" />
-		<data name="archive.manga" />
-		<style name="default" />
-		<style name="layout" />
-		<style name="fonts" />
-		<style name="colors" />
-		<style name="archive" />
+		<use-template ref="xsl/_archive.hentai" />
+		<use-data ref="data/archive.manga" />
+		<use-stylesheet ref="css/default" />
+		<use-stylesheet ref="css/layout" />
+		<use-stylesheet ref="css/fonts" />
+		<use-stylesheet ref="css/colors" />
+		<use-stylesheet ref="css/archive" />
 	</fragment>
 
 	<fragment name="unicode-mapper">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<struc name="/core/DOM" />
-			<script name="UnicodeMapper" />
-			<template name="unicode-mapper" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/UnicodeMapper" />
+			<use-template ref="xsl/unicode-mapper" />
 		</fragment>
 	</fragment>
 
 	<fragment name="kana-home">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
 			<res name="/core/sites" load="xml" />
-			<template name="kana-home" />
+			<use-template ref="xsl/kana-home" />
 		</fragment>
-		<!--<call name="slothsoft-chat" as="chat"/> -->
+		<!--<use-data ref="/slothsoft-chat" as="chat"/> -->
 	</fragment>
 
 	<fragment name="kana-table">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="kana" />
-			<style name="kana" />
+			<use-template ref="xsl/kana" />
+			<use-stylesheet ref="css/kana" />
 			<res name="kana" load="xml" />
 		</fragment>
 	</fragment>
 
 	<fragment name="kana-translator">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="kana-translator" />
-			<style name="kana" />
-			<struc name="/core/DOM" />
-			<script name="Translator" />
+			<use-template ref="xsl/kana-translator" />
+			<use-stylesheet ref="css/kana" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/Translator" />
 			<res name="kana" load="xml" />
 		</fragment>
 	</fragment>
 
 	<fragment name="kana-test">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="kana-test" />
-			<data name="kana.test" />
-			<style name="kana" />
-			<struc name="/core/DOM" />
+			<use-template ref="xsl/kana-test" />
+			<use-data ref="data/kana.test" />
+			<use-stylesheet ref="css/kana" />
+			<include-fragment ref="//core/DOM" />
 		</fragment>
 	</fragment>
 
 	<fragment name="kana-vocab">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="kana-vocab" />
-			<data name="kana.vocab" />
-			<style name="kana" />
-			<struc name="/core/DOM" />
-			<script name="Translator" />
-			<script name="Vocab" />
-			<script name="VocabTest" />
+			<use-template ref="xsl/kana-vocab" />
+			<use-data ref="data/kana.vocab" />
+			<use-stylesheet ref="css/kana" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/Translator" />
+			<use-script ref="js/Vocab" />
+			<use-script ref="js/VocabTest" />
 		</fragment>
 	</fragment>
 	<fragment name="kana-vocab-mobile">
-		<template name="_default" />
+		<use-template ref="xsl/_default" />
 		<res name="/core/sites" load="xml" />
-		<style name="default" />
-		<style name="colors" />
-		<style name="layout" />
+		<use-stylesheet ref="css/default" />
+		<use-stylesheet ref="css/colors" />
+		<use-stylesheet ref="css/layout" />
 		<fragment name="content">
-			<template name="kana-vocab" />
-			<data name="kana.vocab" />
-			<style name="kana" />
-			<style name="kana-mobile" />
-			<struc name="/core/DOM" />
-			<script name="Translator" />
-			<script name="Vocab" />
-			<script name="VocabTest" />
+			<use-template ref="xsl/kana-vocab" />
+			<use-data ref="data/kana.vocab" />
+			<use-stylesheet ref="css/kana" />
+			<use-stylesheet ref="css/kana-mobile" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/Translator" />
+			<use-script ref="js/Vocab" />
+			<use-script ref="js/VocabTest" />
 		</fragment>
 	</fragment>
 	<fragment name="vocab-words-log">
-		<template name="vocab-log" />
-		<data name="kana.vocab" />
+		<use-template ref="xsl/vocab-log" />
+		<use-data ref="data/kana.vocab" />
 	</fragment>
 	<fragment name="vocab-kanji-log">
-		<template name="vocab-log" />
-		<data name="vocab.kanji" />
+		<use-template ref="xsl/vocab-log" />
+		<use-data ref="data/vocab.kanji" />
 	</fragment>
 	<fragment name="vocab-list-add">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="vocab-list-add" />
-			<data name="kana.vocab" />
-			<style name="kana" />
-			<struc name="/core/DOM" />
-			<script name="Translator" />
+			<use-template ref="xsl/vocab-list-add" />
+			<use-data ref="data/kana.vocab" />
+			<use-stylesheet ref="css/kana" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/Translator" />
 		</fragment>
 	</fragment>
 
 	<fragment name="vocab-kanji">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="vocab-kanji" />
-			<data name="vocab.kanji" />
-			<style name="kana" />
-			<struc name="/core/DOM" />
-			<script name="Translator" />
-			<script name="Vocab" />
-			<script name="VocabTest" />
+			<use-template ref="xsl/vocab-kanji" />
+			<use-data ref="data/vocab.kanji" />
+			<use-stylesheet ref="css/kana" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/Translator" />
+			<use-script ref="js/Vocab" />
+			<use-script ref="js/VocabTest" />
 		</fragment>
 	</fragment>
 	<fragment name="vocab-kanji-mobile">
-		<template name="_default" />
+		<use-template ref="xsl/_default" />
 		<res name="/core/sites" load="xml" />
-		<style name="default" />
-		<style name="colors" />
-		<style name="layout" />
+		<use-stylesheet ref="css/default" />
+		<use-stylesheet ref="css/colors" />
+		<use-stylesheet ref="css/layout" />
 		<fragment name="content">
-			<template name="vocab-kanji" />
-			<data name="vocab.kanji" />
-			<style name="kana" />
-			<style name="kana-mobile" />
-			<struc name="/core/DOM" />
-			<script name="Translator" />
-			<script name="Vocab" />
-			<script name="VocabTest" />
+			<use-template ref="xsl/vocab-kanji" />
+			<use-data ref="data/vocab.kanji" />
+			<use-stylesheet ref="css/kana" />
+			<use-stylesheet ref="css/kana-mobile" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/Translator" />
+			<use-script ref="js/Vocab" />
+			<use-script ref="js/VocabTest" />
 		</fragment>
 	</fragment>
 
 	<fragment name="vocab-words-test">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="vocab.test" />
-			<data name="kana.vocab" />
-			<style name="kana" />
-			<struc name="/core/DOM" />
-			<script name="Translator" />
-			<script name="Vocab" />
-			<script name="VocabTest" />
+			<use-template ref="xsl/vocab.test" />
+			<use-data ref="data/kana.vocab" />
+			<use-stylesheet ref="css/kana" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/Translator" />
+			<use-script ref="js/Vocab" />
+			<use-script ref="js/VocabTest" />
 		</fragment>
 	</fragment>
 	<fragment name="vocab-kanji-test">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="vocab.test" />
-			<data name="vocab.kanji" />
-			<style name="kana" />
-			<struc name="/core/DOM" />
-			<script name="Translator" />
-			<script name="Vocab" />
-			<script name="VocabTest" />
+			<use-template ref="xsl/vocab.test" />
+			<use-data ref="data/vocab.kanji" />
+			<use-stylesheet ref="css/kana" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/Translator" />
+			<use-script ref="js/Vocab" />
+			<use-script ref="js/VocabTest" />
 		</fragment>
 	</fragment>
 
 	<fragment name="vocab-verbs">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="vocab-grammar" />
-			<data name="vocab-grammar-verbs" />
-			<style name="kana" />
-			<struc name="/core/DOM" />
-			<script name="Translator" />
+			<use-template ref="xsl/vocab-grammar" />
+			<use-data ref="data/vocab-grammar-verbs" />
+			<use-stylesheet ref="css/kana" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/Translator" />
 		</fragment>
 	</fragment>
 	<fragment name="vocab-verbs-old">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="vocab-grammar" />
+			<use-template ref="xsl/vocab-grammar" />
 			<res name="japanese-faulo-verbs" load="xml" />
-			<style name="kana" />
-			<struc name="/core/DOM" />
-			<script name="Translator" />
+			<use-stylesheet ref="css/kana" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/Translator" />
 		</fragment>
 	</fragment>
 
 
 	<fragment name="english-vocab">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="english-vocab" />
-			<data name="english.vocab" />
-			<style name="kana" />
-			<struc name="/core/DOM" />
-			<script name="Translator" />
+			<use-template ref="xsl/english-vocab" />
+			<use-data ref="data/english.vocab" />
+			<use-stylesheet ref="css/kana" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/Translator" />
 		</fragment>
 	</fragment>
 
 
 	<fragment name="tetris">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="tetris" />
+			<use-template ref="xsl/tetris" />
 			<res name="tetris" />
 			<scriptDir name="Tetris/" />
 		</fragment>
 	</fragment>
 
 	<fragment name="fire-emblem-home">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="fire-emblem-home" />
+			<use-template ref="xsl/fire-emblem-home" />
 		</fragment>
-		<call name="fire-emblem-chat" as="chat" />
+		<use-data ref="/fire-emblem-chat" as="chat" />
 	</fragment>
 	<fragment name="fire-emblem-breeding">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="fire-emblem-breeding" />
-			<data name="fire-emblem" />
-			<script name="FireEmblem" />
+			<use-template ref="xsl/fire-emblem-breeding" />
+			<use-data ref="data/fire-emblem" />
+			<use-script ref="js/FireEmblem" />
 		</fragment>
-		<call name="fire-emblem-chat" as="chat" />
+		<use-data ref="/fire-emblem-chat" as="chat" />
 	</fragment>
 	<fragment name="fire-emblem-cast">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="fire-emblem-cast" />
-			<data name="fire-emblem" />
+			<use-template ref="xsl/fire-emblem-cast" />
+			<use-data ref="data/fire-emblem" />
 		</fragment>
-		<call name="fire-emblem-chat" as="chat" />
+		<use-data ref="/fire-emblem-chat" as="chat" />
 	</fragment>
 	<fragment name="fire-emblem-chat">
 		<param name="chat-database" value="fireemblem" />
-		<template name="/chat/shoutbox" />
-		<call name="/chat/default" as="chat" />
+		<use-template ref="xsl//chat/shoutbox" />
+		<use-data ref="//chat/default" as="chat" />
 	</fragment>
 
 	<fragment name="backend-colors">
-		<struc name="default" />
-		<call name="/minecraft/status" as="status" />
+		<include-fragment ref="/default" />
+		<use-data ref="//minecraft/status" as="status" />
 		<fragment name="content">
-			<template name="backend.colors" />
-			<script name="CSS" />
-			<struc name="/core/DOM" />
-			<script name="Backend" />
+			<use-template ref="xsl/backend.colors" />
+			<use-script ref="js/CSS" />
+			<include-fragment ref="//core/DOM" />
+			<use-script ref="js/Backend" />
 		</fragment>
 	</fragment>
 
 	<fragment name="deviantart">
-		<template name="deviantart" />
-		<data name="deviantart" />
+		<use-template ref="xsl/deviantart" />
+		<use-data ref="data/deviantart" />
 		<param name="standalone" scope="global" />
 	</fragment>
 
 	<fragment name="heartbeat-for-all">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="heartbeat-for-all" />
+			<use-template ref="xsl/heartbeat-for-all" />
 		</fragment>
-		<call name="slothsoft-chat" as="chat" />
+		<use-data ref="/slothsoft-chat" as="chat" />
 	</fragment>
 	<fragment name="heartbeat-for-all.game">
-		<struc name="default" />
+		<include-fragment ref="/default" />
 		<fragment name="content">
-			<template name="heartbeat-for-all.game" />
+			<use-template ref="xsl/heartbeat-for-all.game" />
 		</fragment>
 	</fragment>
 	<resource name="heartbeat-for-all-zip" path="heartbeat-for-all/HeartbeatForAll.zip"
@@ -396,16 +405,16 @@
 	<fragment name="music">
 		<resDir name="music-mp3" />
 		<resDir name="music-lyrics" load="xml" />
-		<template name="_music" />
+		<use-template ref="xsl/_music" />
 		<param name="standalone" scope="global" />
-		<script name="/core/HTML5" />
-		<style name="default" />
+		<use-script ref="js//core/HTML5" />
+		<use-stylesheet ref="css/default" />
 	</fragment>
 
 	<fragment name="writing">
 		<param name="standalone" scope="global" />
-		<template name="writing" />
-		<style name="fonts" />
+		<use-template ref="xsl/writing" />
+		<use-stylesheet ref="css/fonts" />
 	</fragment>
 
 
@@ -491,17 +500,20 @@
 	<resourceDir name="vocab-jlpt" path="vocab-jlpt" type="application/xhtml+xml" />
 	<resource name="grammar-ja" path="japanese.grammar.xml" type="application/xml" />
 
-
-	<struc name="default">
-		<template name="_default" />
-		<res name="/core/sites" load="xml" />
-		<style name="default" />
-		<style name="fonts" />
-		<style name="colors" />
-		<style name="layout" />
-		<call name="navi" />
-		<call name="validator" />
-		<call name="dict.select" />
-		<struc name="/core/HTML5" />
-	</struc>
+	
+	
+	<fragment name="default">
+		<use-template ref="xsl/_default" />
+		<use-data ref="//core/sites" load="xml" />
+		<use-stylesheet ref="css/default" />
+		<use-stylesheet ref="css/fonts" />
+		<use-stylesheet ref="css/colors" />
+		<use-stylesheet ref="css/layout" />
+		<use-data ref="navi" />
+		<use-data ref="validator" />
+		<use-data ref="dict.select" />
+		<include-fragment ref="//core/HTML5" />
+	</fragment>
+	
+</assets>
 </module>

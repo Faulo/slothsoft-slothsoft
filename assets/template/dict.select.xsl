@@ -6,7 +6,7 @@
 	<xsl:variable name="langList" select="/data/*"/>
 	<xsl:variable name="currentLang" select="/data/request/@lang"/>
 	
-	<xsl:template match="/data">
+	<xsl:template match="/*">
 		<!--
 		<details class="Dictionary">
 			<summary>
