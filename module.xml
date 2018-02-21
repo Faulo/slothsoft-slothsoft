@@ -40,6 +40,7 @@ Llo
       <resource-directory name="fonts" path="fonts" type="application/font-sfnt"/>
       <resource-directory name="icons" path="icons" type="image/png"/>
       <resource-directory name="system-fonts" path="system-fonts" type="application/font-sfnt"/>
+      <resource-directory name="language-images" path="lang" type="image/svg+xml"/>
       <resource name="lang-de-de" path="lang/de-de.svg" type="image/svg+xml"/>
       <resource name="lang-en-us" path="lang/en-us.svg" type="image/svg+xml"/>
       <resource name="lang-ja-jp" path="lang/ja-jp.svg" type="image/svg+xml"/>
@@ -166,6 +167,7 @@ Llo
     </fragment>
     <fragment name="dict.select">
       <use-template ref="xsl/dict.select"/>
+      <use-document ref="static/language-images"/>
     </fragment>
     <fragment name="downloads">
       <use-template ref="xsl/_downloads"/>

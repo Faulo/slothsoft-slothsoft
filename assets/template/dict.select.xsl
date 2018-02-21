@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
 	xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:sfm="http://schema.slothsoft.net/farah/module">
 	
-	<xsl:variable name="langList" select="/data/*"/>
-	<xsl:variable name="currentLang" select="/data/request/@lang"/>
+	<xsl:variable name="langList" select="/*/*[@name = 'language-images']/*/*"/>
+	<xsl:variable name="currentLang" select="/*/*[@name = 'request']/request/@lang"/>
 	
 	<xsl:template match="/*">
 		<!--
@@ -41,8 +42,8 @@
 		<html:a href="?lang={$lang}" rel="alternate" hreflang="{$lang}" title="language:{$lang}" data-dict="@title">
 			<!--<img src="data:{$icon/@type};base64,{$icon/@base64}" alt="language:{$lang}" data-dict="@alt"/>-->
 			<!--<img src="/getResource.php/slothsoft/lang-{$lang}" alt="language:{$lang}" data-dict="@alt"/>-->
-			<xsl:copy-of select="$langList[@name = concat('lang-', $lang)]/*"/>
-			<!--<img src="/getResource.php/slothsoft/lang-{$lang}" alt="{$lang}"/>-->
+			<!--<xsl:copy-of select="document($langList[@name = $lang]/@url)"/>-->
+			<html:img src="{$langList[@name = $lang]/@href}" alt="{$lang}"/>
 		</html:a>
 	</xsl:template>
 </xsl:stylesheet>
