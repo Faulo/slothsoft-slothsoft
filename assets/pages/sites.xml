@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pages xmlns="http://schema.slothsoft.net/farah/sites">
+<pages xmlns="http://schema.slothsoft.net/farah/sites" xmlns:sfm="http://schema.slothsoft.net/farah/module">
 	<page name="AboutUs" ref="about-us" title="About us" status-active="" status-public=""/>
 	<page name="Shoutboxes" ref="chat-list" title="Shoutboxes" status-active="" status-public=""/>
 	<page name="Minecraft" ref="home" title="Minecraft" module="minecraft" status-active="" status-public="">
-		<param name="chat-duration" value="30"/>
+		<sfm:param name="chat-duration" value="30"/>
 		<page name="News" ref="news" title="News" status-active="" status-public=""/>
 		<page name="Chat" ref="shoutbox" title="Chat" status-active="" status-public="">
-			<param name="chat-duration" value="90"/>
+			<sfm:param name="chat-duration" value="90"/>
 		</page>
 		<page name="Log" ref="log" title="Server-Log" status-active="" status-public="">
-			<data ref="/minecraft/sites.log"/>
+			<include-pages ref="//minecraft/data/sites.log"/>
 		</page>
 		<page name="Infos" ref="infos" title="Server-Informationen" status-active="" status-public="">
 			<!--<page name="log" ref="log" title="Server-Log"/>-->
@@ -43,47 +43,47 @@
 	<include-pages ref="//talesof/pages/sites"/>
 	<page name="FireEmblem" title="Fire Emblem" ref="fire-emblem-home" status-active="" status-public="">
 		<page name="RekkaNoKen" title="Rekka No Ken" redirect="/FireEmblem/TheBlazingBlade" status-active="">
-			<param name="game" value="bs"/>
+			<sfm:param name="game" value="bs"/>
 			<page name="Characters" title="Characters" redirect="/FireEmblem/TheBlazingBlade/Characters" status-active=""/>
 			<page name="Relationships" title="Relationships" redirect="/FireEmblem/TheBlazingBlade/Relationships" status-active=""/>
 		</page>
 		<page name="TheBlazingBlade" title="The Blazing Blade" redirect="Characters" status-active="" status-public="">
-			<param name="game" value="bs"/>
+			<sfm:param name="game" value="bs"/>
 			<page name="Characters" title="Characters" ref="fire-emblem-cast" status-active="" status-public=""/>
 			<page name="Relationships" title="Relationships" ref="fire-emblem-breeding" status-active="" status-public=""/>
 		</page>
 		<page name="TheSacredStones" title="The Sacred Stones" redirect="Characters" status-active="" status-public="">
-			<param name="game" value="ss"/>
+			<sfm:param name="game" value="ss"/>
 			<page name="Characters" title="Characters" ref="fire-emblem-cast" status-active="" status-public=""/>
 			<page name="Relationships" title="Relationships" ref="fire-emblem-breeding" status-active="" status-public=""/>
 		</page>
 		<page name="PathOfRadiance" title="Path of Radiance" redirect="Characters" status-active="" status-public="">
-			<param name="game" value="por"/>
+			<sfm:param name="game" value="por"/>
 			<page name="Characters" title="Characters" ref="fire-emblem-cast" status-active="" status-public=""/>
 			<page name="Relationships" title="Relationships" ref="fire-emblem-breeding" status-active="" status-public=""/>
 		</page>
 		<page name="RadiantDawn" title="Radiant Dawn" redirect="Characters" status-active="" status-public="">
-			<param name="game" value="rd"/>
+			<sfm:param name="game" value="rd"/>
 			<page name="Characters" title="Characters" ref="fire-emblem-cast" status-active="" status-public=""/>
 		</page>
 		<page name="ShadowDragon" title="Shadow Dragon" redirect="Characters" status-active="" status-public="">
-			<param name="game" value="sd"/>
+			<sfm:param name="game" value="sd"/>
 			<page name="Characters" title="Characters" ref="fire-emblem-cast" status-active="" status-public=""/>
 		</page>
 		<page name="Awakening" title="Awakening" redirect="Characters" status-active="" status-public="">
-			<param name="game" value="aw"/>
+			<sfm:param name="game" value="aw"/>
 			<page name="Characters" title="Characters" ref="fire-emblem-cast" status-active="" status-public=""/>
 			<page name="Relationships" title="Relationships" ref="fire-emblem-breeding" status-active="" status-public=""/>
 		</page>
 		<page name="Fates" title="Fates" redirect="Characters" status-active="" status-public="">
-			<param name="game" value="if"/>
+			<sfm:param name="game" value="if"/>
 			<page name="Characters" title="Characters" ref="fire-emblem-cast" status-active="" status-public=""/>
 			<page name="Relationships" title="Relationships" ref="fire-emblem-breeding" status-active="" status-public=""/>
 		</page>
 	</page>
-	<res ref="/dragonage/sites"/>
-	<include-pages ref="//amber/sites"/>
-	<res ref="/slothsoft/sites-vocab"/>
+	<include-pages ref="//dragonage/pages/sites"/>
+	<include-pages ref="//amber/pages/sites"/>
+	<include-pages ref="//slothsoft/pages/sites.vocab"/>
 	<page name="MissingSloth" ref="missingSloth" title="Missing Sloth" status-active=""/>
 	<page name="VideoChatThing" ref="vct-home" module="webrtc" title="VideoChatThing" status-active="" status-public="">
 		<page name="Room" ref="vct-room" title="Room" status-active=""/>
@@ -108,5 +108,5 @@
 		<page name="map" title="Map-Test" ref="minecraft/mapTest"/>
 	</page>
 	-->
-	<res ref="/slothsoft/sites-downloads"/>
+	<include-pages ref="pages/sites.downloads"/>
 </pages>

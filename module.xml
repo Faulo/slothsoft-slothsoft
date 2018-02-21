@@ -16,6 +16,78 @@ Llo
 -->
   <default-configuration/>
   <assets>
+    <resource-directory name="data" path="data" type="application/x-php"/>
+    <resource-directory name="css" path="stylesheet" type="text/css"/>
+    <resource-directory name="js" path="script" type="application/javascript"/>
+    <resource-directory name="xsl" path="template" type="application/xslt+xml"/>
+    <resource-directory name="dictionary" path="dictionary" type="application/xml"/>
+    <resource-directory name="pages" path="pages" type="application/xml"/>
+    <directory name="static">
+	    <resource name="heartbeat-for-all-zip" path="heartbeat-for-all/HeartbeatForAll.zip" type="application/zip"/>
+	    <resource name="heartbeat-for-all-unity" path="heartbeat-for-all/Web.unity3d" type="application/vnd.unity"/>
+    
+      <resource-directory name="staff-content" path="staff" type="application/xml"/>
+      <resource-directory name="staff-images" path="staff" type="image/png"/>
+      <resource name="owner" path="owner.xml" type="application/xml"/>
+      <resource name="finnish-faulo" path="finnish.faulo.xhtml" type="application/xhtml+xml"/>
+      <resource name="japanese-faulo" path="japanese.faulo.xhtml" type="application/xhtml+xml"/>
+      <resource name="japanese-faulo-verbs" path="japanese.faulo.verbs.xml" type="application/xml"/>
+      <resource name="english-julia" path="english.julia.xhtml" type="application/xhtml+xml"/>
+      <resource name="kana" path="kana.xml" type="application/xml"/>
+      <resource name="vocab.kanji.map" path="vocab.kanji.map.svg" type="image/svg+xml"/>
+      <resource name="pc" path="pc.xml" type="application/xml"/>
+      <resource name="prefFonts" path="fonts.json" type="application/json"/>
+      <resource-directory name="fonts" path="fonts" type="application/font-sfnt"/>
+      <resource-directory name="icons" path="icons" type="image/png"/>
+      <resource-directory name="system-fonts" path="system-fonts" type="application/font-sfnt"/>
+      <resource name="lang-de-de" path="lang/de-de.svg" type="image/svg+xml"/>
+      <resource name="lang-en-us" path="lang/en-us.svg" type="image/svg+xml"/>
+      <resource name="lang-ja-jp" path="lang/ja-jp.svg" type="image/svg+xml"/>
+      <resource-directory name="lang" path="lang" type="image/svg+xml"/>
+      <resource name="fire-emblem" path="fire-emblem.xml" type="application/xml"/>
+      <resource-directory name="fire-emblem-data" path="fire-emblem" type="text/csv">
+        <options del="|" sep="" output="table" min-length="1"/>
+      </resource-directory>
+      <resource-directory name="fire-emblem-por" path="fire-emblem-por" type="text/csv">
+        <options del="|" sep="" output="table" min-length="1"/>
+      </resource-directory>
+      <resource-directory name="fire-emblem-sd" path="fire-emblem-sd" type="text/csv">
+        <options del="|" sep="" output="table" min-length="1"/>
+      </resource-directory>
+      <resource-directory name="fire-emblem-bs" path="fire-emblem-bs" type="text/csv">
+        <options del="|" sep="" output="table" min-length="1"/>
+      </resource-directory>
+      <resource-directory name="fire-emblem-ss" path="fire-emblem-ss" type="text/csv">
+        <options del="|" sep="" output="table" min-length="1"/>
+      </resource-directory>
+      <resource-directory name="fire-emblem-aw" path="fire-emblem-aw" type="text/csv">
+        <options del="|" sep="" output="table" min-length="1"/>
+      </resource-directory>
+      <resource-directory name="fire-emblem-rd" path="fire-emblem-rd" type="text/csv">
+        <options del="|" sep="" output="table" min-length="1"/>
+      </resource-directory>
+      <resource name="fire-emblem-shadow-dragon" path="FireEmblemShadowDragon.csv" type="text/csv">
+        <options del="|" sep="" cols="13" output="table"/>
+      </resource>
+      <resource name="fire-emblem-shadow-dragon2" path="FireEmblemShadowDragon2.csv" type="text/csv">
+        <options del="|" sep="" cols="9" output="table"/>
+      </resource>
+      <resource name="fire-emblem-path-of-radiance" path="FireEmblemPathOfRadiance.csv" type="text/csv">
+        <options del="|" sep="" cols="9" output="table"/>
+      </resource>
+      <resource name="fire-emblem-path-of-radiance2" path="FireEmblemPathOfRadiance2.txt" type="text/plain"/>
+      <resource name="unicode-mapper" path="unicode-mapper.xml" type="application/xml"/>
+      <resource name="unicode-mapping" path="unicode-mapping.xml" type="application/xml"/>
+      <resource-directory name="pics" path="pics" type="image/png"/>
+      <resource name="favicon" path="favicon.png" type="image/png"/>
+      <resource-directory name="games" path="games" type="application/zip"/>
+      <resource-directory name="unity" path="games" type="application/vnd.unity"/>
+      <resource-directory name="music-mp3" path="music-mp3" type="audio/mpeg"/>
+      <resource-directory name="music-lyrics" path="music-lyrics" type="text/plain"/>
+      <resource-directory name="vocab-ja" path="vocab-ja" type="audio/mpeg"/>
+      <resource-directory name="vocab-jlpt" path="vocab-jlpt" type="application/xhtml+xml"/>
+      <resource name="grammar-ja" path="japanese.grammar.xml" type="application/xml"/>
+    </directory>
     <fragment name="empty">
       <include-fragment ref="/default"/>
     </fragment>
@@ -189,7 +261,7 @@ Llo
     </fragment>
     <fragment name="kana-vocab-mobile">
       <use-template ref="xsl/_default"/>
-      <use-document ref="//slothsoft@core/static/sites"/>
+      <use-document ref="//farah/sites"/>
       <use-stylesheet ref="css/default"/>
       <use-stylesheet ref="css/colors"/>
       <use-stylesheet ref="css/layout"/>
@@ -236,7 +308,7 @@ Llo
     </fragment>
     <fragment name="vocab-kanji-mobile">
       <use-template ref="xsl/_default"/>
-      <use-document ref="//slothsoft@core/static/sites"/>
+      <use-document ref="//farah/sites"/>
       <use-stylesheet ref="css/default"/>
       <use-stylesheet ref="css/colors"/>
       <use-stylesheet ref="css/layout"/>
@@ -375,7 +447,6 @@ Llo
       <use-template ref="xsl/writing"/>
       <use-stylesheet ref="css/fonts"/>
     </fragment>
-    <directory name="static"/>
     <fragment name="default">
       <use-template ref="xsl/_default"/>
       <use-document ref="//farah/sites"/>
