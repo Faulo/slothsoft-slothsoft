@@ -1,45 +1,45 @@
 @font-face {
 	font-family: myHeading;
-	src: local("Bitstream Cyberbit");/*, local("BernhardModernBT-Bold"), url(/mod/core/res/fonts/BernModB.ttf);*/
+	src: local("Bitstream Cyberbit");
 }
 @font-face {
 	font-family: mySpecialHeading;
-	src: local("CopperplateGothicBT-Bold");/*, local("CopperplateGothicBT-Bold"), url(/mod/core/res/fonts/CopGotBd.ttf);*/
+	src: local("CopperplateGothicBT-Bold");
 } 
 @font-face {
 	font-family: myParagraph;
-	src: local("Calibri");/*, local("Calibri"), local("Bitstream Cyberbit"), Constantia, url(/mod/core/res/fonts/constan.ttf);*/
+	src: local("Calibri");
 }
 @font-face {
 	font-family: myBody;
-	src: local("Calibri");/*, local("Calibri"), url(/mod/core/res/fonts/calibri.ttf);*/
+	src: local("Calibri");
 }
 @font-face {
 	font-family: myNumber;
-	src: local("Consolas");/*, local("Consolas"), url(/mod/core/res/fonts/consola.ttf);*/
+	src: local("Consolas");
 }
 @font-face {
 	font-family: myTime;
-	src: local("Consolas");/*, local("Consolas"), url(/mod/core/res/fonts/consola.ttf);*/
+	src: local("Consolas");
 }
 @font-face {
 	font-family: myCode;
-	src: local("CourierNewPSMT");/*, local("CourierNewPSMT"), url(/mod/core/res/fonts/cour.ttf);*/
+	src: local("CourierNewPSMT");
 }
 @font-face {
 	font-family: myPixel;
-	/*src: local("Press Start"), url(/getResource.php/slothsoft/fonts/PrStart);*/
-	src: local("Press Start K"), url(/getResource.php/slothsoft/fonts/prstartk);
+	/*src: local("Press Start"), url(/getAsset.php/slothsoft/static/fonts/PrStart);*/
+	src: local("Press Start K"), url(/getAsset.php/slothsoft/static/fonts/prstartk);
 }
 @font-face {
 	font-family: myOldschool;
 	/* https://www.fontzillion.com/fonts/petyka/retro-computer */
-	src: local("Verily Serif Mono"), url("/getResource.php/slothsoft/fonts/VerilySerifMono");
-	/*src: local("Amberworld"), url("/getResource.php/slothsoft/fonts/Amberworld");*/
+	src: local("Verily Serif Mono"), url("/getAsset.php/slothsoft/static/fonts/VerilySerifMono");
+	/*src: local("Amberworld"), url("/getAsset.php/slothsoft/static/fonts/Amberworld");*/
 }
 @font-face {
 	font-family: myKanjiStroke;
-	src: local("KanjiStrokeOrders"), url(/getResource.php/slothsoft/fonts/KanjiStrokeOrders) format("truetype");
+	src: local("KanjiStrokeOrders"), url(/getAsset.php/slothsoft/static/fonts/KanjiStrokeOrders) format("truetype");
 }
 @font-face {
 	font-family: myKanjiSansSerif;
@@ -58,11 +58,11 @@
 }
 @font-face {
 	font-family: myUnicodeSymbols;
-	src: local("Segoe UI Symbol"), url(/getResource.php/slothsoft/fonts/seguisym) format("truetype");
+	src: local("Segoe UI Symbol"), url(/getAsset.php/slothsoft/static/fonts/seguisym) format("truetype");
 }
 @font-face {
 	font-family: myUnicodeLetters;
-	src:local("Quivira"), url(/getResource.php/slothsoft/fonts/Quivira) format("truetype");
+	src:local("Quivira"), url(/getAsset.php/slothsoft/static/fonts/Quivira) format("truetype");
 }
 h1, h2, h3, h4, h5, h6, .myHeading {
 	font-family: myHeading, serif; /*, myUnicodeSymbols, myUnicodeLetters; */

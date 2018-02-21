@@ -3,7 +3,9 @@
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
-	<xsl:template match="/data">
+	<xsl:import href="farah://slothsoft@farah/xsl/module"/>
+	
+	<xsl:template match="/*">
 		<article>
 			<h2>Introduction</h2>
 			<p>Fire Emblem is a Strategy-RPG series developed by Nintendo's Intelligent Systems.</p>

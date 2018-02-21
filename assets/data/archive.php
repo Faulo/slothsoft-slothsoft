@@ -3,7 +3,6 @@ namespace Slothsoft\Farah;
 
 use Slothsoft\Core\DOMHelper;
 use Slothsoft\Core\FileSystem;
-use Slothsoft\Lang\Dictionary;
 use DOMXPath;
 $torrentPath = '"C:/Program Files (x86)/BitTorrent/BitTorrent.exe" "%s"';
 $torrentBatch = 'C:/NetzwerkDaten/Dropbox/Tools/createTorrent.bat';
@@ -602,7 +601,7 @@ if ($node = $requestNodes['nico']) {
             $node->parentNode->removeChild($node);
         }
         
-        $doc = $dom->transform($doc, $this->getTemplateDoc('slothsoft/_archive.nico'));
+        $doc = $dom->transformToDocument($doc, $this->getTemplateDoc('slothsoft/_archive.nico'));
         $ret = HTTPFile::createFromDocument($doc, 'nico-comments.xhtml');
     }
 }

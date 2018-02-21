@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<data>
+<pages xmlns="http://schema.slothsoft.net/farah/sites">
 	<page name="AboutUs" ref="about-us" title="About us" status-active="" status-public=""/>
 	<page name="Shoutboxes" ref="chat-list" title="Shoutboxes" status-active="" status-public=""/>
 	<page name="Minecraft" ref="home" title="Minecraft" module="minecraft" status-active="" status-public="">
@@ -40,7 +40,7 @@
 		<page name="Players" ref="players" title="Spieler" status-active="" status-public=""/>
 		<page name="Pics" ref="pics" title="Bildchen" status-active="" status-public=""/>
 	</page>
-	<res ref="/talesof/sites"/>
+	<include-pages ref="//talesof/pages/sites"/>
 	<page name="FireEmblem" title="Fire Emblem" ref="fire-emblem-home" status-active="" status-public="">
 		<page name="RekkaNoKen" title="Rekka No Ken" redirect="/FireEmblem/TheBlazingBlade" status-active="">
 			<param name="game" value="bs"/>
@@ -82,7 +82,7 @@
 		</page>
 	</page>
 	<res ref="/dragonage/sites"/>
-	<res ref="/amber/sites"/>
+	<include-pages ref="//amber/sites"/>
 	<res ref="/slothsoft/sites-vocab"/>
 	<page name="MissingSloth" ref="missingSloth" title="Missing Sloth" status-active=""/>
 	<page name="VideoChatThing" ref="vct-home" module="webrtc" title="VideoChatThing" status-active="" status-public="">
@@ -109,4 +109,4 @@
 	</page>
 	-->
 	<res ref="/slothsoft/sites-downloads"/>
-</data>
+</pages>
