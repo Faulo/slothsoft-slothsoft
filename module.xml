@@ -90,7 +90,7 @@ Llo
       <resource name="grammar-ja" path="japanese.grammar.xml" type="application/xml"/>
     </directory>
     <fragment name="empty">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
     </fragment>
     <fragment name="bahn">
       <param name="standalone" scope="global"/>
@@ -113,14 +113,14 @@ Llo
       <use-document ref="//chat/default" as="chat"/>
     </fragment>
     <fragment name="home">
-      <include-fragment ref="default"/>
+      <import ref="default"/>
       <fragment name="content">
         <use-template ref="xsl/home"/>
       </fragment>
       <use-document ref="slothsoft-chat" as="chat"/>
     </fragment>
     <fragment name="about-us">
-      <include-fragment ref="default"/>
+      <import ref="default"/>
       <fragment name="content">
         <use-template ref="xsl/about-us"/>
         <use-document ref="//farah/request"/>
@@ -128,12 +128,12 @@ Llo
       </fragment>
     </fragment>
     <fragment name="missingSloth">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <use-document ref="//extensions/home-missingSloth" as="content"/>
       <use-document ref="/missing-sloth-chat" as="chat"/>
     </fragment>
     <fragment name="chat-list">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/chat-list"/>
         <use-document ref="slothsoft-chat" as="chat"/>
@@ -144,7 +144,7 @@ Llo
       </fragment>
     </fragment>
     <fragment name="imprint">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/address"/>
         <use-document ref="static/owner"/>
@@ -184,7 +184,7 @@ Llo
       <use-stylesheet ref="css/fonts"/>
       <use-stylesheet ref="css/colors"/>
       <use-stylesheet ref="css/archive"/>
-      <include-fragment ref="//sse/script"/>
+      <import ref="//sse/script"/>
       <use-script ref="js/Unison"/>
       <use-document ref="/archive-chat" as="chat"/>
       <use-script ref="js//core/HTML5"/>
@@ -208,22 +208,22 @@ Llo
       <use-stylesheet ref="css/archive"/>
     </fragment>
     <fragment name="unicode-mapper">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/UnicodeMapper"/>
         <use-template ref="xsl/unicode-mapper"/>
       </fragment>
     </fragment>
     <fragment name="kana-home">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-document ref="//farah/sites"/>
         <use-template ref="xsl/kana-home"/>
       </fragment>
     </fragment>
     <fragment name="kana-table">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/kana"/>
         <use-stylesheet ref="css/kana"/>
@@ -231,31 +231,31 @@ Llo
       </fragment>
     </fragment>
     <fragment name="kana-translator">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/kana-translator"/>
         <use-stylesheet ref="css/kana"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/Translator"/>
         <use-document ref="kana"/>
       </fragment>
     </fragment>
     <fragment name="kana-test">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/kana-test"/>
         <use-document ref="data/kana.test"/>
         <use-stylesheet ref="css/kana"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
       </fragment>
     </fragment>
     <fragment name="kana-vocab">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/kana-vocab"/>
         <use-document ref="data/kana.vocab"/>
         <use-stylesheet ref="css/kana"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/Translator"/>
         <use-script ref="js/Vocab"/>
         <use-script ref="js/VocabTest"/>
@@ -272,7 +272,7 @@ Llo
         <use-document ref="data/kana.vocab"/>
         <use-stylesheet ref="css/kana"/>
         <use-stylesheet ref="css/kana-mobile"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/Translator"/>
         <use-script ref="js/Vocab"/>
         <use-script ref="js/VocabTest"/>
@@ -287,22 +287,22 @@ Llo
       <use-document ref="data/vocab.kanji"/>
     </fragment>
     <fragment name="vocab-list-add">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/vocab-list-add"/>
         <use-document ref="data/kana.vocab"/>
         <use-stylesheet ref="css/kana"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/Translator"/>
       </fragment>
     </fragment>
     <fragment name="vocab-kanji">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/vocab-kanji"/>
         <use-document ref="data/vocab.kanji"/>
         <use-stylesheet ref="css/kana"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/Translator"/>
         <use-script ref="js/Vocab"/>
         <use-script ref="js/VocabTest"/>
@@ -319,75 +319,75 @@ Llo
         <use-document ref="data/vocab.kanji"/>
         <use-stylesheet ref="css/kana"/>
         <use-stylesheet ref="css/kana-mobile"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/Translator"/>
         <use-script ref="js/Vocab"/>
         <use-script ref="js/VocabTest"/>
       </fragment>
     </fragment>
     <fragment name="vocab-words-test">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/vocab.test"/>
         <use-document ref="data/kana.vocab"/>
         <use-stylesheet ref="css/kana"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/Translator"/>
         <use-script ref="js/Vocab"/>
         <use-script ref="js/VocabTest"/>
       </fragment>
     </fragment>
     <fragment name="vocab-kanji-test">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/vocab.test"/>
         <use-document ref="data/vocab.kanji"/>
         <use-stylesheet ref="css/kana"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/Translator"/>
         <use-script ref="js/Vocab"/>
         <use-script ref="js/VocabTest"/>
       </fragment>
     </fragment>
     <fragment name="vocab-verbs">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/vocab-grammar"/>
         <use-document ref="data/vocab-grammar-verbs"/>
         <use-stylesheet ref="css/kana"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/Translator"/>
       </fragment>
     </fragment>
     <fragment name="vocab-verbs-old">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/vocab-grammar"/>
         <use-document ref="static/japanese-faulo-verbs"/>
         <use-stylesheet ref="css/kana"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/Translator"/>
       </fragment>
     </fragment>
     <fragment name="english-vocab">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/english-vocab"/>
         <use-document ref="data/english.vocab"/>
         <use-stylesheet ref="css/kana"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/Translator"/>
       </fragment>
     </fragment>
     <fragment name="fire-emblem-home">
-      <include-fragment ref="default"/>
+      <import ref="default"/>
       <fragment name="content">
         <use-template ref="xsl/fire-emblem-home"/>
       </fragment>
       <use-document ref="fire-emblem-chat" as="chat"/>
     </fragment>
     <fragment name="fire-emblem-breeding">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/fire-emblem-breeding"/>
         <use-document ref="data/fire-emblem"/>
@@ -396,7 +396,7 @@ Llo
       <use-document ref="/fire-emblem-chat" as="chat"/>
     </fragment>
     <fragment name="fire-emblem-cast">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/fire-emblem-cast"/>
         <use-document ref="data/fire-emblem"/>
@@ -409,12 +409,12 @@ Llo
       <use-document ref="//chat/default" as="chat"/>
     </fragment>
     <fragment name="backend-colors">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <use-document ref="//minecraft/status" as="status"/>
       <fragment name="content">
         <use-template ref="xsl/backend.colors"/>
         <use-script ref="js/CSS"/>
-        <include-fragment ref="//core/DOM"/>
+        <import ref="//core/DOM"/>
         <use-script ref="js/Backend"/>
       </fragment>
     </fragment>
@@ -424,14 +424,14 @@ Llo
       <param name="standalone" scope="global"/>
     </fragment>
     <fragment name="heartbeat-for-all">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/heartbeat-for-all"/>
       </fragment>
       <use-document ref="/slothsoft-chat" as="chat"/>
     </fragment>
     <fragment name="heartbeat-for-all.game">
-      <include-fragment ref="/default"/>
+      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/heartbeat-for-all.game"/>
       </fragment>
@@ -459,7 +459,7 @@ Llo
       <use-document ref="navi"/>
       <use-document ref="validator"/>
       <use-document ref="dict.select"/>
-      <include-fragment ref="//core/HTML5"/>
+      <import ref="//core/HTML5"/>
     </fragment>
   </assets>
 </module>
