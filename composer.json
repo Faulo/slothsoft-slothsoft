@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Slothsoft\\Slothsoft\\": "src\/Slothsoft\/Slothsoft\/"
+            "Slothsoft\\Slothsoft\\": "src\/"
         }
     }
 }
