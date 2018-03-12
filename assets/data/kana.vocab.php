@@ -47,7 +47,7 @@ if ($userKey = $this->httpRequest->getInputValue('vocab-resource')) {
         $tmpDoc = $tmpDocList[$key];
     }
     // $uri = sprintf($sourceURI, $level);
-    // $tmpDoc = self::loadExternalDocument($uri, 'html', TIME_MONTH);
+    // $tmpDoc = self::loadExternalDocument($uri, 'html', Seconds::MONTH);
     // my_dump($tmpDoc);
 }
 if ($userListKey) {

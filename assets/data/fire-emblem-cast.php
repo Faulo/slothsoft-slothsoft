@@ -155,14 +155,14 @@ foreach ($gameNodeList as $gameNode) {
     }
     $uriList = array_keys($charList);
     // my_dump($uriList);die();
-    $code = '\Storage::loadExternalDocument($args, TIME_MONTH);';
+    $code = '\Storage::loadExternalDocument($args, Seconds::MONTH);';
     Manager::executeList($code, $uriList);
     
     // my_dump($charList);
     
     // load HTML
     foreach ($charList as $charURI => &$charData) {
-        if ($xpath = Storage::loadExternalXPath($charURI, TIME_MONTH)) {
+        if ($xpath = Storage::loadExternalXPath($charURI, Seconds::MONTH)) {
             $nodeList = $xpath->evaluate('//table[contains(., "Game")][1]'); // class="toccolours"
             if (! $nodeList->length) {
                 echo $charURI . PHP_EOL;

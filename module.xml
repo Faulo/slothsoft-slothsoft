@@ -158,9 +158,9 @@ Llo
       <param name="standalone" scope="global"/>
       <use-template ref="xsl/_pc"/>
       <use-document ref="data/pc"/>
-      <use-stylesheet ref="css/default"/>
-      <use-stylesheet ref="css/fonts"/>
-      <use-script ref="js//core/html5"/>
+      <link-stylesheet ref="css/default"/>
+      <link-stylesheet ref="css/fonts"/>
+      <link-script ref="js//core/html5"/>
     </fragment>
     <fragment name="validator">
       <use-template ref="xsl/w3c.validator"/>
@@ -171,47 +171,47 @@ Llo
     </fragment>
     <fragment name="downloads">
       <use-template ref="xsl/_downloads"/>
-      <use-stylesheet ref="css/default"/>
-      <use-stylesheet ref="css/layout"/>
-      <use-stylesheet ref="css/fonts"/>
+      <link-stylesheet ref="css/default"/>
+      <link-stylesheet ref="css/layout"/>
+      <link-stylesheet ref="css/fonts"/>
       <use-document ref="data/downloads"/>
     </fragment>
     <fragment name="archive">
       <use-template ref="xsl/_archive"/>
       <use-document ref="data/archive"/>
-      <use-stylesheet ref="css/default"/>
-      <use-stylesheet ref="css/layout"/>
-      <use-stylesheet ref="css/fonts"/>
-      <use-stylesheet ref="css/colors"/>
-      <use-stylesheet ref="css/archive"/>
+      <link-stylesheet ref="css/default"/>
+      <link-stylesheet ref="css/layout"/>
+      <link-stylesheet ref="css/fonts"/>
+      <link-stylesheet ref="css/colors"/>
+      <link-stylesheet ref="css/archive"/>
       <import ref="//sse/script"/>
-      <use-script ref="js/Unison"/>
+      <link-script ref="js/Unison"/>
       <use-document ref="/archive-chat" as="chat"/>
-      <use-script ref="js//core/HTML5"/>
+      <link-script ref="js//core/HTML5"/>
     </fragment>
     <fragment name="archive-hentai">
       <use-template ref="xsl/_archive.hentai"/>
       <use-document ref="data/archive.hentai"/>
-      <use-stylesheet ref="css/default"/>
-      <use-stylesheet ref="css/layout"/>
-      <use-stylesheet ref="css/fonts"/>
-      <use-stylesheet ref="css/colors"/>
-      <use-stylesheet ref="css/archive"/>
+      <link-stylesheet ref="css/default"/>
+      <link-stylesheet ref="css/layout"/>
+      <link-stylesheet ref="css/fonts"/>
+      <link-stylesheet ref="css/colors"/>
+      <link-stylesheet ref="css/archive"/>
     </fragment>
     <fragment name="archive-manga">
       <use-template ref="xsl/_archive.hentai"/>
       <use-document ref="data/archive.manga"/>
-      <use-stylesheet ref="css/default"/>
-      <use-stylesheet ref="css/layout"/>
-      <use-stylesheet ref="css/fonts"/>
-      <use-stylesheet ref="css/colors"/>
-      <use-stylesheet ref="css/archive"/>
+      <link-stylesheet ref="css/default"/>
+      <link-stylesheet ref="css/layout"/>
+      <link-stylesheet ref="css/fonts"/>
+      <link-stylesheet ref="css/colors"/>
+      <link-stylesheet ref="css/archive"/>
     </fragment>
     <fragment name="unicode-mapper">
       <import ref="/default"/>
       <fragment name="content">
         <import ref="//core/DOM"/>
-        <use-script ref="js/UnicodeMapper"/>
+        <link-script ref="js/UnicodeMapper"/>
         <use-template ref="xsl/unicode-mapper"/>
       </fragment>
     </fragment>
@@ -226,7 +226,7 @@ Llo
       <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/kana"/>
-        <use-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana"/>
         <use-document ref="kana"/>
       </fragment>
     </fragment>
@@ -234,9 +234,9 @@ Llo
       <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/kana-translator"/>
-        <use-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana"/>
         <import ref="//core/DOM"/>
-        <use-script ref="js/Translator"/>
+        <link-script ref="js/Translator"/>
         <use-document ref="kana"/>
       </fragment>
     </fragment>
@@ -245,7 +245,7 @@ Llo
       <fragment name="content">
         <use-template ref="xsl/kana-test"/>
         <use-document ref="data/kana.test"/>
-        <use-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana"/>
         <import ref="//core/DOM"/>
       </fragment>
     </fragment>
@@ -254,28 +254,28 @@ Llo
       <fragment name="content">
         <use-template ref="xsl/kana-vocab"/>
         <use-document ref="data/kana.vocab"/>
-        <use-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana"/>
         <import ref="//core/DOM"/>
-        <use-script ref="js/Translator"/>
-        <use-script ref="js/Vocab"/>
-        <use-script ref="js/VocabTest"/>
+        <link-script ref="js/Translator"/>
+        <link-script ref="js/Vocab"/>
+        <link-script ref="js/VocabTest"/>
       </fragment>
     </fragment>
     <fragment name="kana-vocab-mobile">
       <use-template ref="xsl/_default"/>
       <use-document ref="//farah/sites"/>
-      <use-stylesheet ref="css/default"/>
-      <use-stylesheet ref="css/colors"/>
-      <use-stylesheet ref="css/layout"/>
+      <link-stylesheet ref="css/default"/>
+      <link-stylesheet ref="css/colors"/>
+      <link-stylesheet ref="css/layout"/>
       <fragment name="content">
         <use-template ref="xsl/kana-vocab"/>
         <use-document ref="data/kana.vocab"/>
-        <use-stylesheet ref="css/kana"/>
-        <use-stylesheet ref="css/kana-mobile"/>
+        <link-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana-mobile"/>
         <import ref="//core/DOM"/>
-        <use-script ref="js/Translator"/>
-        <use-script ref="js/Vocab"/>
-        <use-script ref="js/VocabTest"/>
+        <link-script ref="js/Translator"/>
+        <link-script ref="js/Vocab"/>
+        <link-script ref="js/VocabTest"/>
       </fragment>
     </fragment>
     <fragment name="vocab-words-log">
@@ -291,9 +291,9 @@ Llo
       <fragment name="content">
         <use-template ref="xsl/vocab-list-add"/>
         <use-document ref="data/kana.vocab"/>
-        <use-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana"/>
         <import ref="//core/DOM"/>
-        <use-script ref="js/Translator"/>
+        <link-script ref="js/Translator"/>
       </fragment>
     </fragment>
     <fragment name="vocab-kanji">
@@ -301,28 +301,28 @@ Llo
       <fragment name="content">
         <use-template ref="xsl/vocab-kanji"/>
         <use-document ref="data/vocab.kanji"/>
-        <use-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana"/>
         <import ref="//core/DOM"/>
-        <use-script ref="js/Translator"/>
-        <use-script ref="js/Vocab"/>
-        <use-script ref="js/VocabTest"/>
+        <link-script ref="js/Translator"/>
+        <link-script ref="js/Vocab"/>
+        <link-script ref="js/VocabTest"/>
       </fragment>
     </fragment>
     <fragment name="vocab-kanji-mobile">
       <use-template ref="xsl/_default"/>
       <use-document ref="//farah/sites"/>
-      <use-stylesheet ref="css/default"/>
-      <use-stylesheet ref="css/colors"/>
-      <use-stylesheet ref="css/layout"/>
+      <link-stylesheet ref="css/default"/>
+      <link-stylesheet ref="css/colors"/>
+      <link-stylesheet ref="css/layout"/>
       <fragment name="content">
         <use-template ref="xsl/vocab-kanji"/>
         <use-document ref="data/vocab.kanji"/>
-        <use-stylesheet ref="css/kana"/>
-        <use-stylesheet ref="css/kana-mobile"/>
+        <link-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana-mobile"/>
         <import ref="//core/DOM"/>
-        <use-script ref="js/Translator"/>
-        <use-script ref="js/Vocab"/>
-        <use-script ref="js/VocabTest"/>
+        <link-script ref="js/Translator"/>
+        <link-script ref="js/Vocab"/>
+        <link-script ref="js/VocabTest"/>
       </fragment>
     </fragment>
     <fragment name="vocab-words-test">
@@ -330,11 +330,11 @@ Llo
       <fragment name="content">
         <use-template ref="xsl/vocab.test"/>
         <use-document ref="data/kana.vocab"/>
-        <use-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana"/>
         <import ref="//core/DOM"/>
-        <use-script ref="js/Translator"/>
-        <use-script ref="js/Vocab"/>
-        <use-script ref="js/VocabTest"/>
+        <link-script ref="js/Translator"/>
+        <link-script ref="js/Vocab"/>
+        <link-script ref="js/VocabTest"/>
       </fragment>
     </fragment>
     <fragment name="vocab-kanji-test">
@@ -342,11 +342,11 @@ Llo
       <fragment name="content">
         <use-template ref="xsl/vocab.test"/>
         <use-document ref="data/vocab.kanji"/>
-        <use-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana"/>
         <import ref="//core/DOM"/>
-        <use-script ref="js/Translator"/>
-        <use-script ref="js/Vocab"/>
-        <use-script ref="js/VocabTest"/>
+        <link-script ref="js/Translator"/>
+        <link-script ref="js/Vocab"/>
+        <link-script ref="js/VocabTest"/>
       </fragment>
     </fragment>
     <fragment name="vocab-verbs">
@@ -354,9 +354,9 @@ Llo
       <fragment name="content">
         <use-template ref="xsl/vocab-grammar"/>
         <use-document ref="data/vocab-grammar-verbs"/>
-        <use-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana"/>
         <import ref="//core/DOM"/>
-        <use-script ref="js/Translator"/>
+        <link-script ref="js/Translator"/>
       </fragment>
     </fragment>
     <fragment name="vocab-verbs-old">
@@ -364,9 +364,9 @@ Llo
       <fragment name="content">
         <use-template ref="xsl/vocab-grammar"/>
         <use-document ref="static/japanese-faulo-verbs"/>
-        <use-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana"/>
         <import ref="//core/DOM"/>
-        <use-script ref="js/Translator"/>
+        <link-script ref="js/Translator"/>
       </fragment>
     </fragment>
     <fragment name="english-vocab">
@@ -374,9 +374,9 @@ Llo
       <fragment name="content">
         <use-template ref="xsl/english-vocab"/>
         <use-document ref="data/english.vocab"/>
-        <use-stylesheet ref="css/kana"/>
+        <link-stylesheet ref="css/kana"/>
         <import ref="//core/DOM"/>
-        <use-script ref="js/Translator"/>
+        <link-script ref="js/Translator"/>
       </fragment>
     </fragment>
     <fragment name="fire-emblem-home">
@@ -391,7 +391,7 @@ Llo
       <fragment name="content">
         <use-template ref="xsl/fire-emblem-breeding"/>
         <use-document ref="data/fire-emblem"/>
-        <use-script ref="js/FireEmblem"/>
+        <link-script ref="js/FireEmblem"/>
       </fragment>
       <use-document ref="/fire-emblem-chat" as="chat"/>
     </fragment>
@@ -413,9 +413,9 @@ Llo
       <use-document ref="//minecraft/status" as="status"/>
       <fragment name="content">
         <use-template ref="xsl/backend.colors"/>
-        <use-script ref="js/CSS"/>
+        <link-script ref="js/CSS"/>
         <import ref="//core/DOM"/>
-        <use-script ref="js/Backend"/>
+        <link-script ref="js/Backend"/>
       </fragment>
     </fragment>
     <fragment name="deviantart">
@@ -431,31 +431,31 @@ Llo
       <use-document ref="/slothsoft-chat" as="chat"/>
     </fragment>
     <fragment name="heartbeat-for-all.game">
-      <import ref="/default"/>
       <fragment name="content">
         <use-template ref="xsl/heartbeat-for-all.game"/>
       </fragment>
+      <import ref="/default"/>
     </fragment>
     <fragment name="music">
+      <param name="standalone" scope="global"/>
+      <link-script ref="js//core/HTML5"/>
+      <link-stylesheet ref="css/default"/>
       <use-document ref="static/music-mp3"/>
       <use-document ref="static/music-lyrics"/>
       <use-template ref="xsl/_music"/>
-      <param name="standalone" scope="global"/>
-      <use-script ref="js//core/HTML5"/>
-      <use-stylesheet ref="css/default"/>
     </fragment>
     <fragment name="writing">
+      <link-stylesheet ref="css/fonts"/>
       <param name="standalone" scope="global"/>
       <use-template ref="xsl/writing"/>
-      <use-stylesheet ref="css/fonts"/>
     </fragment>
     <fragment name="default">
+      <link-stylesheet ref="css/default"/>
+      <link-stylesheet ref="css/fonts"/>
+      <link-stylesheet ref="css/colors"/>
+      <link-stylesheet ref="css/layout"/>
       <use-template ref="xsl/_default"/>
       <use-document ref="//farah/sites"/>
-      <use-stylesheet ref="css/default"/>
-      <use-stylesheet ref="css/fonts"/>
-      <use-stylesheet ref="css/colors"/>
-      <use-stylesheet ref="css/layout"/>
       <use-document ref="navi"/>
       <use-document ref="validator"/>
       <use-document ref="dict.select"/>

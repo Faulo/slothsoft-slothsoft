@@ -548,11 +548,11 @@ if ($node = $requestNodes['nico']) {
                 $time /= 1000000;
                 $time += (float) $node->getAttribute('date');
                 
-                $node->setAttribute('date_string', gmdate(DATE_DATETIME, $time));
+                $node->setAttribute('date_string', gmdate(DateTimeFormatter::FORMAT_DATETIME, $time));
                 
                 $time -= $rootTime;
                 $node->setAttribute('time', $time);
-                $node->setAttribute('time_string', gmdate(DATE_TIME, $time > 0 ? $time : 0));
+                $node->setAttribute('time_string', gmdate(DateTimeFormatter::FORMAT_TIME, $time > 0 ? $time : 0));
                 
                 $html = $node->textContent;
                 

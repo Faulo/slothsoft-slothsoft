@@ -83,18 +83,18 @@ if ($filterText) {
          * if (is_array($level)) {
          * $lvl = array_shift($level);
          * $kanjiUri = sprintf($sourceURI, $lvl);
-         * if ($tmpDoc = self::loadExternalDocument($kanjiUri, null, TIME_MONTH)) {
+         * if ($tmpDoc = self::loadExternalDocument($kanjiUri, null, Seconds::MONTH)) {
          * $tmpPath = self::loadXPath($tmpDoc);
          *
          * foreach ($level as $lvl) {
-         * if ($tmp = self::loadExternalDocument(sprintf($sourceURI, $lvl), null, TIME_MONTH)) {
+         * if ($tmp = self::loadExternalDocument(sprintf($sourceURI, $lvl), null, Seconds::MONTH)) {
          * $tmpDoc->documentElement->appendChild($tmpDoc->importNode($tmp->documentElement, true));
          * }
          * }
          * }
          * } else {
          * $kanjiUri = sprintf($sourceURI, $level);
-         * if ($tmpDoc = self::loadExternalDocument($kanjiUri, null, TIME_MONTH)) {
+         * if ($tmpDoc = self::loadExternalDocument($kanjiUri, null, Seconds::MONTH)) {
          * $tmpPath = self::loadXPath($tmpDoc);
          * }
          * }
