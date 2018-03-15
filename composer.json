@@ -26,6 +26,9 @@
         "slothsoft\/minecraft": "dev-master"
     },
     "autoload": {
+        "files": [
+            "src\/registerModule.php"
+        ],
         "psr-0": {
             "Slothsoft\\Slothsoft\\": "src\/"
         }
