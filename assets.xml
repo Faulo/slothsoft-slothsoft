@@ -5,7 +5,38 @@
     <resource-directory name="js" path="script" type="application/javascript"/>
     <resource-directory name="xsl" path="template" type="application/xslt+xml"/>
     <resource-directory name="dictionary" path="dictionary" type="application/xml"/>
-    <resource-directory name="pages" path="pages" type="application/xml"/>
+    
+    
+    <directory name="pages" path="pages">
+    	<resource-directory name="builders" path="builders" type="application/xslt+xml"/>
+    	
+    	<resource name="slothsoft.net" type="application/xml"/>
+    	
+    	<fragment name="minecraft">
+    		<use-template ref="pages/builders/minecraft"/>
+    		<use-document ref="//slothsoft@minecraft/data/sites.log"/>
+    	</fragment>
+    	<fragment name="amber">
+    		<use-template ref="pages/builders/amber"/>
+    	</fragment>
+    	<fragment name="tales">
+    		<use-template ref="pages/builders/tales"/>
+    	</fragment>
+    	<fragment name="fire-emblem">
+    		<use-template ref="pages/builders/fire-emblem"/>
+    	</fragment>
+    	<fragment name="dragon-age">
+    		<use-template ref="pages/builders/dragon-age"/>
+    	</fragment>
+    	<fragment name="vocab">
+    		<use-template ref="pages/builders/vocab"/>
+    	</fragment>
+    	<fragment name="downloads">
+    		<use-template ref="pages/builders/downloads"/>
+    	</fragment>
+    </directory>
+    
+    
     <directory name="static">
 	    <resource name="heartbeat-for-all-zip" path="heartbeat-for-all/HeartbeatForAll.zip" type="application/zip"/>
 	    <resource name="heartbeat-for-all-unity" path="heartbeat-for-all/Web.unity3d" type="application/vnd.unity"/>
