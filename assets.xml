@@ -12,10 +12,11 @@
     	
     	<resource name="slothsoft.net" type="application/xml"/>
     	
-    	<fragment name="minecraft">
-    		<use-template ref="pages/builders/minecraft"/>
+    	<directory name="minecraft">
+			<resource use="template" name="template" type="application/xslt+xml"/>
     		<use-document ref="//slothsoft@minecraft/data/sites.log"/>
-    	</fragment>
+    	</directory>
+    	
     	<fragment name="amber">
     		<use-template ref="pages/builders/amber"/>
     	</fragment>
