@@ -7,8 +7,8 @@
     <resource-directory name="dictionary" path="dictionary" type="application/xml"/>
     
     
-    <directory name="pages" path="pages">
-    	<resource-directory name="builders" path="builders" type="application/xslt+xml"/>
+    <directory name="pages" use="document">
+    	<resource-directory name="builders" type="application/xslt+xml"/>
     	
     	<resource name="slothsoft.net" type="application/xml"/>
     	
@@ -17,9 +17,10 @@
     		<use-document ref="//slothsoft@minecraft/data/sites.log"/>
     	</directory>
     	
-    	<fragment name="amber">
-    		<use-template ref="pages/builders/amber"/>
-    	</fragment>
+    	<directory name="amber">
+    		<resource use="template" name="template" type="application/xslt+xml"/>
+    	</directory>
+    	
     	<fragment name="tales">
     		<use-template ref="pages/builders/tales"/>
     	</fragment>
@@ -130,7 +131,7 @@
     </fragment>
     <fragment name="home">
       <import ref="default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/home"/>
       </fragment>
       <use-document ref="slothsoft-chat" as="chat"/>
