@@ -19,6 +19,7 @@
     	
     	<directory name="amber">
     		<resource use="template" name="template" type="application/xslt+xml"/>
+    		<use-document ref="//slothsoft@amber/games/index"/>
     	</directory>
     	
     	<fragment name="tales">
@@ -37,6 +38,8 @@
     		<use-template ref="pages/builders/downloads"/>
     	</fragment>
     </directory>
+    
+    
     
     
     <directory name="static">
@@ -106,6 +109,36 @@
       <resource-directory name="vocab-jlpt" path="vocab-jlpt" type="application/xhtml+xml"/>
       <resource name="grammar-ja" path="japanese.grammar.xml" type="application/xml"/>
     </directory>
+    
+    <fragment name="ambermoon">
+    	<fragment name="description">
+	      <import ref="default"/>
+	      <use-document ref="//amber/html/description" as="content"/>
+	      <use-document ref="ambermoon/shoutbox" as="chat"/>
+    	</fragment>
+    	<fragment name="editor">
+	      <import ref="default"/>
+	      <use-document ref="//amber/html/editor" as="content"/>
+	    </fragment>
+    	<fragment name="resource">
+	      <import ref="default"/>
+	      <use-document ref="//amber/html/resource" as="content"/>
+	    </fragment>
+	    <fragment name="chat">
+	      <import ref="default"/>
+	      <use-document ref="ambermoon/shoutbox" as="content"/>
+	    </fragment>
+		<fragment name="shoutbox">
+			 <param name="chat-database" value="amber"/>
+			 <use-template ref="//chat/xsl/shoutbox"/>
+			 <use-document ref="//chat/default" as="chat"/>
+		 </fragment>
+    </fragment>
+    
+    
+    
+    
+    
     <fragment name="empty">
       <import ref="/default"/>
     </fragment>
@@ -478,4 +511,10 @@
       <use-document ref="dict.select"/>
       <import ref="//core/HTML5"/>
     </fragment>
+    
+    
+    
+    
+    
+    
   </assets>
