@@ -5,6 +5,9 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/*">
 		<pages>
+			<page name="DragonAge" title="DragonAge" module="dragonage" ref="home" status-active="" status-public="">
+				<page name="InquisitionCombos" title="InquisitionCombos" ref="combos" status-active="" status-public=""/>
+			</page>
 		</pages>
 	</xsl:template>
 </xsl:stylesheet>

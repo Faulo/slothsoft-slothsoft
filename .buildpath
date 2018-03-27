@@ -44,6 +44,11 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/php-ds/php-ds/src">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/phpdocumentor/reflection-common/src">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
@@ -184,7 +189,12 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/slothsoft/dbms/php">
+	<buildpathentry kind="src" path="vendor/slothsoft/dbms/src">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/slothsoft/extensions/src">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -199,7 +209,7 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/slothsoft/lang/php">
+	<buildpathentry kind="src" path="vendor/slothsoft/lang/src">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -209,22 +219,27 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/slothsoft/pt/php">
+	<buildpathentry kind="src" path="vendor/slothsoft/pt/src">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/slothsoft/savegame/php">
+	<buildpathentry kind="src" path="vendor/slothsoft/savegame/src">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/slothsoft/sse/php">
+	<buildpathentry kind="src" path="vendor/slothsoft/sse/src">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-	<buildpathentry kind="src" path="vendor/slothsoft/w3c/php">
+	<buildpathentry kind="src" path="vendor/slothsoft/talesof/src">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/slothsoft/w3c/src">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
