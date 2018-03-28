@@ -133,6 +133,17 @@
 		 </fragment>
     </fragment>
     
+    <fragment name="dragon-age">
+    	<fragment name="home">
+	      <import ref="default"/>
+	      <use-document ref="//dragonage/html/home" as="content"/>
+    	</fragment>
+    	<fragment name="combos">
+	      <import ref="default"/>
+	      <use-document ref="//dragonage/html/combos" as="content"/>
+    	</fragment>
+    </fragment>
+    
     
     
     
