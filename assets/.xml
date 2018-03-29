@@ -6,7 +6,7 @@
     <resource-directory name="dictionary" path="dictionary" type="application/xml"/>
     
     
-    <directory name="pages" use="document">    	
+    <directory name="sites">    	
     	<directory name="minecraft">
 			<resource use="template" name="template" type="application/xslt+xml"/>
     		<use-document ref="//slothsoft@minecraft/data/sites.log"/>
