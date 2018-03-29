@@ -36,10 +36,13 @@
 	},
 	"autoload" : {
 		"files" : [
-			"C:\\Webserver\\workspace\\slothsoft-slothsoft\\src\\registerModule.php"
+			"src/registerModule.php"
 		],
 		"psr-0" : {
 			"Slothsoft\\Slothsoft\\" : "src/"
 		}
-	}
+	},
+	"keywords" : [
+		"farah-domain"
+	]
 }
