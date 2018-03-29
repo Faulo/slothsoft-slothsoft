@@ -181,11 +181,6 @@
         <use-document ref="static/staff-content"/>
       </fragment>
     </fragment>
-    <fragment name="missingSloth">
-      <import ref="/default"/>
-      <use-document ref="//extensions/home-missingSloth" as="content"/>
-      <use-document ref="/missing-sloth-chat" as="chat"/>
-    </fragment>
     <fragment name="chat-list">
       <import ref="/default"/>
       <fragment name="content">
@@ -214,7 +209,7 @@
       <!-- <use-document ref="data/pc"/> -->
       <link-stylesheet ref="css/default"/>
       <link-stylesheet ref="css/fonts"/>
-      <link-script ref="//core/js/html5"/>
+      <import ref="//core/imports/HTML5"/>
     </fragment>
     <fragment name="validator">
       <use-template ref="xsl/w3c.validator"/>
@@ -231,10 +226,10 @@
       <link-stylesheet ref="css/fonts"/>
       <link-stylesheet ref="css/colors"/>
       <link-stylesheet ref="css/archive"/>
-      <import ref="//sse/script"/>
+      <import ref="//sse/imports/client"/>
       <link-script ref="js/Unison"/>
       <use-document ref="/archive-chat" as="chat"/>
-      <link-script ref="//core/js/HTML5"/>
+      <import ref="//core/imports/HTML5"/>
     </fragment>
     <fragment name="archive-hentai">
       <use-template ref="xsl/_archive.hentai"/>
@@ -257,7 +252,7 @@
     <fragment name="unicode-mapper">
       <import ref="/default"/>
       <fragment name="content">
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/UnicodeMapper"/>
         <use-template ref="xsl/unicode-mapper"/>
       </fragment>
@@ -282,7 +277,7 @@
       <fragment name="content">
         <use-template ref="xsl/kana-translator"/>
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/Translator"/>
         <use-document ref="static/kana"/>
       </fragment>
@@ -293,7 +288,7 @@
         <use-template ref="xsl/kana-test"/>
         <!-- <use-document ref="data/kana.test"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
       </fragment>
     </fragment>
     <fragment name="kana-vocab">
@@ -302,7 +297,7 @@
         <use-template ref="xsl/kana-vocab"/>
         <!-- <use-document ref="data/kana.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/Translator"/>
         <link-script ref="js/Vocab"/>
         <link-script ref="js/VocabTest"/>
@@ -319,7 +314,7 @@
         <!--  <use-document ref="data/kana.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
         <link-stylesheet ref="css/kana-mobile"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/Translator"/>
         <link-script ref="js/Vocab"/>
         <link-script ref="js/VocabTest"/>
@@ -339,7 +334,7 @@
         <use-template ref="xsl/vocab-list-add"/>
         <!-- <use-document ref="data/kana.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/Translator"/>
       </fragment>
     </fragment>
@@ -349,7 +344,7 @@
         <use-template ref="xsl/vocab-kanji"/>
         <!-- <use-document ref="data/vocab.kanji"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/Translator"/>
         <link-script ref="js/Vocab"/>
         <link-script ref="js/VocabTest"/>
@@ -366,7 +361,7 @@
         <!-- <use-document ref="data/vocab.kanji"/> -->
         <link-stylesheet ref="css/kana"/>
         <link-stylesheet ref="css/kana-mobile"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/Translator"/>
         <link-script ref="js/Vocab"/>
         <link-script ref="js/VocabTest"/>
@@ -378,7 +373,7 @@
         <use-template ref="xsl/vocab.test"/>
         <!-- <use-document ref="data/kana.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/Translator"/>
         <link-script ref="js/Vocab"/>
         <link-script ref="js/VocabTest"/>
@@ -390,7 +385,7 @@
         <use-template ref="xsl/vocab.test"/>
         <!-- <use-document ref="data/vocab.kanji"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/Translator"/>
         <link-script ref="js/Vocab"/>
         <link-script ref="js/VocabTest"/>
@@ -402,7 +397,7 @@
         <use-template ref="xsl/vocab-grammar"/>
         <!-- <use-document ref="data/vocab-grammar-verbs"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/Translator"/>
       </fragment>
     </fragment>
@@ -412,7 +407,7 @@
         <use-template ref="xsl/vocab-grammar"/>
         <use-document ref="static/japanese-faulo-verbs"/>
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/Translator"/>
       </fragment>
     </fragment>
@@ -422,7 +417,7 @@
         <use-template ref="xsl/english-vocab"/>
         <!-- <use-document ref="data/english.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/Translator"/>
       </fragment>
     </fragment>
@@ -461,7 +456,7 @@
       <fragment name="content">
         <use-template ref="xsl/backend.colors"/>
         <link-script ref="js/CSS"/>
-        <import ref="//core/DOM"/>
+        <import ref="//core/imports/DOM"/>
         <link-script ref="js/Backend"/>
       </fragment>
     </fragment>
@@ -506,7 +501,7 @@
       <use-document ref="navi"/>
       <use-document ref="validator"/>
       <use-document ref="dict.select"/>
-      <import ref="//core/HTML5"/>
+      <import ref="//core/imports/HTML5"/>
     </fragment>
     
     
