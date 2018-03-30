@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
 <assets xmlns="http://schema.slothsoft.net/farah/module">
-    <resource-directory name="css" path="stylesheet" type="text/css"/>
-    <resource-directory name="js" path="script" type="application/javascript"/>
-    <resource-directory name="xsl" path="template" type="application/xslt+xml"/>
-    <resource-directory name="dictionary" path="dictionary" type="application/xml"/>
+    <resource-directory name="css" type="text/css"/>
+    <resource-directory name="js" type="application/javascript"/>
+    <resource-directory name="xsl" type="application/xslt+xml"/>
     
-    
+    <resource-directory name="dictionary" type="application/xml"/>
     <directory name="sites">    	
     	<directory name="minecraft">
 			<resource use="template" name="template" type="application/xslt+xml"/>
@@ -108,41 +107,101 @@
       <resource name="grammar-ja" path="japanese.grammar.xml" type="application/xml"/>
     </directory>
     
-    <fragment name="ambermoon">
-    	<fragment name="description">
-	      <import ref="default"/>
-	      <use-document ref="//amber/html/description" as="content"/>
-	      <use-document ref="ambermoon/shoutbox" as="chat"/>
-    	</fragment>
-    	<fragment name="editor">
-	      <import ref="default"/>
-	      <use-document ref="//amber/html/editor" as="content"/>
+    <fragment name="pages">
+	    <fragment name="ambermoon">
+	    	<fragment name="description">
+		      <import ref="default"/>
+		      <use-document ref="//amber/html/description" as="content"/>
+		      <use-document ref="ambermoon/shoutbox" as="chat"/>
+	    	</fragment>
+	    	<fragment name="editor">
+		      <import ref="default"/>
+		      <use-document ref="//amber/html/editor" as="content"/>
+		    </fragment>
+	    	<fragment name="resource">
+		      <import ref="default"/>
+		      <use-document ref="//amber/html/resource" as="content"/>
+		    </fragment>
+		    <fragment name="chat">
+		      <import ref="default"/>
+		      <use-document ref="ambermoon/shoutbox" as="content"/>
+		    </fragment>
+			<fragment name="shoutbox">
+				 <param name="chat-database" value="amber"/>
+				 <use-template ref="//chat/xsl/shoutbox"/>
+				 <use-document ref="//chat/default" as="chat"/>
+			 </fragment>
 	    </fragment>
-    	<fragment name="resource">
-	      <import ref="default"/>
-	      <use-document ref="//amber/html/resource" as="content"/>
+	    
+	    <fragment name="dragon-age">
+	    	<fragment name="home">
+		      <import ref="default"/>
+		      <use-document ref="//dragonage/html/home" as="content"/>
+	    	</fragment>
+	    	<fragment name="combos">
+		      <import ref="default"/>
+		      <use-document ref="//dragonage/html/inquisition/combos" as="content"/>
+	    	</fragment>
 	    </fragment>
-	    <fragment name="chat">
-	      <import ref="default"/>
-	      <use-document ref="ambermoon/shoutbox" as="content"/>
+	    
+	    <fragment name="tales">
+	    	<fragment name="tales-home">
+		      <import ref="api/default"/>
+		      <use-document ref="//talesof/html/home" as="content"/>
+		      <use-document ref="//talesof/html/chat"/>
+		    </fragment>
+	    	<fragment name="eternia-home">
+		      <import ref="api/default"/>
+		      <use-document ref="//talesof/html/eternia/home" as="content"/>
+		      <use-document ref="//talesof/html/chat"/>
+		    </fragment>
+	    	<fragment name="graces-home">
+		      <import ref="api/default"/>
+		      <use-document ref="//talesof/html/graces/home" as="content"/>
+		      <use-document ref="//talesof/html/chat"/>
+		    </fragment>
+	    	<fragment name="craymelEditor">
+		      <import ref="api/default"/>
+		      <use-document ref="//talesof/html/eternia/craymels" as="content"/>
+		      <use-document ref="//talesof/html/chat"/>
+		    </fragment>
+	    	<fragment name="melnicsTest">
+		      <import ref="api/default"/>
+		      <use-document ref="//talesof/html/melnics/test" as="content"/>
+		      <use-document ref="//talesof/html/chat"/>
+		    </fragment>
+	    	<fragment name="melnicsTable">
+		      <import ref="api/default"/>
+		      <use-document ref="//talesof/html/melnics/table" as="content"/>
+		      <use-document ref="//talesof/html/chat"/>
+		    </fragment>
+	    	<fragment name="melnicsTranslator">
+		      <import ref="api/default"/>
+		      <use-document ref="//talesof/html/melnics/translator" as="content"/>
+		      <use-document ref="//talesof/html/chat"/>
+		    </fragment>
+	    	<fragment name="link-heroes">
+		      <import ref="api/default"/>
+		      <use-document ref="//talesof/html/link/heroes" as="content"/>
+		      <use-document ref="//talesof/html/chat"/>
+		    </fragment>
+	    	<fragment name="link-pulls">
+		      <import ref="api/default"/>
+		      <use-document ref="//talesof/html/link/pulls" as="content"/>
+		      <use-document ref="//talesof/html/chat"/>
+		    </fragment>
+	    	<fragment name="carta-home">
+		      <import ref="api/default"/>
+		      <use-document ref="//talesof/html/carta/home" as="content"/>
+		      <use-document ref="//talesof/html/chat"/>
+		    </fragment>
+	    	<fragment name="carta-list">
+		      <import ref="api/default"/>
+		      <use-document ref="//talesof/html/carta/list" as="content"/>
+		      <use-document ref="//talesof/html/chat"/>
+		    </fragment>
 	    </fragment>
-		<fragment name="shoutbox">
-			 <param name="chat-database" value="amber"/>
-			 <use-template ref="//chat/xsl/shoutbox"/>
-			 <use-document ref="//chat/default" as="chat"/>
-		 </fragment>
-    </fragment>
-    
-    <fragment name="dragon-age">
-    	<fragment name="home">
-	      <import ref="default"/>
-	      <use-document ref="//dragonage/html/home" as="content"/>
-    	</fragment>
-    	<fragment name="combos">
-	      <import ref="default"/>
-	      <use-document ref="//dragonage/html/combos" as="content"/>
-    	</fragment>
-    </fragment>
+	 </fragment>
     
     
     
@@ -209,7 +268,7 @@
       <!-- <use-document ref="data/pc"/> -->
       <link-stylesheet ref="css/default"/>
       <link-stylesheet ref="css/fonts"/>
-      <import ref="//core/imports/HTML5"/>
+      <import ref="//core/api/HTML5"/>
     </fragment>
     <fragment name="validator">
       <use-template ref="xsl/w3c.validator"/>
@@ -226,10 +285,10 @@
       <link-stylesheet ref="css/fonts"/>
       <link-stylesheet ref="css/colors"/>
       <link-stylesheet ref="css/archive"/>
-      <import ref="//sse/imports/client"/>
+      <import ref="//sse/api/client"/>
       <link-script ref="js/Unison"/>
       <use-document ref="/archive-chat" as="chat"/>
-      <import ref="//core/imports/HTML5"/>
+      <import ref="//core/api/HTML5"/>
     </fragment>
     <fragment name="archive-hentai">
       <use-template ref="xsl/_archive.hentai"/>
@@ -252,7 +311,7 @@
     <fragment name="unicode-mapper">
       <import ref="/default"/>
       <fragment name="content">
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/UnicodeMapper"/>
         <use-template ref="xsl/unicode-mapper"/>
       </fragment>
@@ -277,7 +336,7 @@
       <fragment name="content">
         <use-template ref="xsl/kana-translator"/>
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/Translator"/>
         <use-document ref="static/kana"/>
       </fragment>
@@ -288,7 +347,7 @@
         <use-template ref="xsl/kana-test"/>
         <!-- <use-document ref="data/kana.test"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
       </fragment>
     </fragment>
     <fragment name="kana-vocab">
@@ -297,7 +356,7 @@
         <use-template ref="xsl/kana-vocab"/>
         <!-- <use-document ref="data/kana.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/Translator"/>
         <link-script ref="js/Vocab"/>
         <link-script ref="js/VocabTest"/>
@@ -314,7 +373,7 @@
         <!--  <use-document ref="data/kana.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
         <link-stylesheet ref="css/kana-mobile"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/Translator"/>
         <link-script ref="js/Vocab"/>
         <link-script ref="js/VocabTest"/>
@@ -334,7 +393,7 @@
         <use-template ref="xsl/vocab-list-add"/>
         <!-- <use-document ref="data/kana.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/Translator"/>
       </fragment>
     </fragment>
@@ -344,7 +403,7 @@
         <use-template ref="xsl/vocab-kanji"/>
         <!-- <use-document ref="data/vocab.kanji"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/Translator"/>
         <link-script ref="js/Vocab"/>
         <link-script ref="js/VocabTest"/>
@@ -361,7 +420,7 @@
         <!-- <use-document ref="data/vocab.kanji"/> -->
         <link-stylesheet ref="css/kana"/>
         <link-stylesheet ref="css/kana-mobile"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/Translator"/>
         <link-script ref="js/Vocab"/>
         <link-script ref="js/VocabTest"/>
@@ -373,7 +432,7 @@
         <use-template ref="xsl/vocab.test"/>
         <!-- <use-document ref="data/kana.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/Translator"/>
         <link-script ref="js/Vocab"/>
         <link-script ref="js/VocabTest"/>
@@ -385,7 +444,7 @@
         <use-template ref="xsl/vocab.test"/>
         <!-- <use-document ref="data/vocab.kanji"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/Translator"/>
         <link-script ref="js/Vocab"/>
         <link-script ref="js/VocabTest"/>
@@ -397,7 +456,7 @@
         <use-template ref="xsl/vocab-grammar"/>
         <!-- <use-document ref="data/vocab-grammar-verbs"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/Translator"/>
       </fragment>
     </fragment>
@@ -407,7 +466,7 @@
         <use-template ref="xsl/vocab-grammar"/>
         <use-document ref="static/japanese-faulo-verbs"/>
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/Translator"/>
       </fragment>
     </fragment>
@@ -417,7 +476,7 @@
         <use-template ref="xsl/english-vocab"/>
         <!-- <use-document ref="data/english.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/Translator"/>
       </fragment>
     </fragment>
@@ -456,7 +515,7 @@
       <fragment name="content">
         <use-template ref="xsl/backend.colors"/>
         <link-script ref="js/CSS"/>
-        <import ref="//core/imports/DOM"/>
+        <import ref="//core/api/DOM"/>
         <link-script ref="js/Backend"/>
       </fragment>
     </fragment>
@@ -501,7 +560,7 @@
       <use-document ref="navi"/>
       <use-document ref="validator"/>
       <use-document ref="dict.select"/>
-      <import ref="//core/imports/HTML5"/>
+      <import ref="//core/api/HTML5"/>
     </fragment>
     
     
