@@ -107,12 +107,39 @@
       <resource name="grammar-ja" path="japanese.grammar.xml" type="application/xml"/>
     </directory>
     
+    <fragment name="shoutboxes">
+	    <fragment name="slothsoft">
+	      <param name="chat-database" value="slothsoft"/>
+	      <import ref="//chat/api/shoutbox"/>
+	    </fragment>
+	    <fragment name="tales">
+	      <param name="chat-database" value="tales"/>
+	      <import ref="//chat/api/shoutbox"/>
+	    </fragment>
+	    <fragment name="amber">
+	      <param name="chat-database" value="amber"/>
+	      <import ref="//chat/api/shoutbox"/>
+	    </fragment>
+	    <fragment name="fireemblem">
+	      <param name="chat-database" value="fireemblem"/>
+	      <import ref="//chat/api/shoutbox"/>
+	    </fragment>
+	    <fragment name="archive">
+	      <param name="chat-database" value="archive"/>
+	      <import ref="//chat/api/shoutbox"/>
+	    </fragment>
+	    <fragment name="vct">
+	      <param name="chat-database" value="vct"/>
+	      <import ref="//chat/api/shoutbox"/>
+	    </fragment>
+    </fragment>
+    
     <fragment name="pages">
 	    <fragment name="ambermoon">
 	    	<fragment name="description">
 		      <import ref="default"/>
 		      <use-document ref="//amber/html/description" as="content"/>
-		      <use-document ref="ambermoon/shoutbox" as="chat"/>
+		      <use-document ref="shoutboxes/amber" as="chat"/>
 	    	</fragment>
 	    	<fragment name="editor">
 		      <import ref="default"/>
@@ -126,17 +153,13 @@
 		      <import ref="default"/>
 		      <use-document ref="ambermoon/shoutbox" as="content"/>
 		    </fragment>
-			<fragment name="shoutbox">
-				 <param name="chat-database" value="amber"/>
-				 <use-template ref="//chat/xsl/shoutbox"/>
-				 <use-document ref="//chat/default" as="chat"/>
-			 </fragment>
 	    </fragment>
 	    
 	    <fragment name="dragon-age">
 	    	<fragment name="home">
 		      <import ref="default"/>
 		      <use-document ref="//dragonage/html/home" as="content"/>
+		      <use-document ref="shoutboxes/slothsoft" as="chat"/>
 	    	</fragment>
 	    	<fragment name="combos">
 		      <import ref="default"/>
@@ -148,57 +171,47 @@
 	    	<fragment name="tales-home">
 		      <import ref="api/default"/>
 		      <use-document ref="//talesof/html/home" as="content"/>
-		      <use-document ref="//talesof/html/chat"/>
+		      <use-document ref="shoutboxes/tales" as="chat"/>
 		    </fragment>
 	    	<fragment name="eternia-home">
 		      <import ref="api/default"/>
 		      <use-document ref="//talesof/html/eternia/home" as="content"/>
-		      <use-document ref="//talesof/html/chat"/>
+		      <use-document ref="shoutboxes/tales" as="chat"/>
 		    </fragment>
 	    	<fragment name="graces-home">
 		      <import ref="api/default"/>
 		      <use-document ref="//talesof/html/graces/home" as="content"/>
-		      <use-document ref="//talesof/html/chat"/>
+		      <use-document ref="shoutboxes/tales" as="chat"/>
 		    </fragment>
 	    	<fragment name="craymelEditor">
 		      <import ref="api/default"/>
 		      <use-document ref="//talesof/html/eternia/craymels" as="content"/>
-		      <use-document ref="//talesof/html/chat"/>
+		      <use-document ref="shoutboxes/tales" as="chat"/>
 		    </fragment>
 	    	<fragment name="melnicsTest">
 		      <import ref="api/default"/>
 		      <use-document ref="//talesof/html/melnics/test" as="content"/>
-		      <use-document ref="//talesof/html/chat"/>
+		      <use-document ref="shoutboxes/tales" as="chat"/>
 		    </fragment>
 	    	<fragment name="melnicsTable">
 		      <import ref="api/default"/>
 		      <use-document ref="//talesof/html/melnics/table" as="content"/>
-		      <use-document ref="//talesof/html/chat"/>
+		      <use-document ref="shoutboxes/tales" as="chat"/>
 		    </fragment>
 	    	<fragment name="melnicsTranslator">
 		      <import ref="api/default"/>
 		      <use-document ref="//talesof/html/melnics/translator" as="content"/>
-		      <use-document ref="//talesof/html/chat"/>
-		    </fragment>
-	    	<fragment name="link-heroes">
-		      <import ref="api/default"/>
-		      <use-document ref="//talesof/html/link/heroes" as="content"/>
-		      <use-document ref="//talesof/html/chat"/>
-		    </fragment>
-	    	<fragment name="link-pulls">
-		      <import ref="api/default"/>
-		      <use-document ref="//talesof/html/link/pulls" as="content"/>
-		      <use-document ref="//talesof/html/chat"/>
+		      <use-document ref="shoutboxes/tales" as="chat"/>
 		    </fragment>
 	    	<fragment name="carta-home">
 		      <import ref="api/default"/>
 		      <use-document ref="//talesof/html/carta/home" as="content"/>
-		      <use-document ref="//talesof/html/chat"/>
+		      <use-document ref="shoutboxes/tales" as="chat"/>
 		    </fragment>
 	    	<fragment name="carta-list">
 		      <import ref="api/default"/>
 		      <use-document ref="//talesof/html/carta/list" as="content"/>
-		      <use-document ref="//talesof/html/chat"/>
+		      <use-document ref="shoutboxes/tales" as="chat"/>
 		    </fragment>
 	    </fragment>
 	 </fragment>
@@ -209,21 +222,6 @@
     
     <fragment name="empty">
       <import ref="/default"/>
-    </fragment>
-    <fragment name="slothsoft-chat">
-      <param name="chat-database" value="slothsoft"/>
-      <use-template ref="//chat/xsl/shoutbox"/>
-      <use-document ref="//chat/default" as="chat"/>
-    </fragment>
-    <fragment name="missing-sloth-chat">
-      <param name="chat-database" value="missingsloth"/>
-      <use-template ref="//chat/xsl/shoutbox"/>
-      <use-document ref="//chat/default" as="chat"/>
-    </fragment>
-    <fragment name="archive-chat">
-      <param name="chat-database" value="archive"/>
-      <use-template ref="//chat/xsl/shoutbox"/>
-      <use-document ref="//chat/default" as="chat"/>
     </fragment>
     <fragment name="home">
       <import ref="default"/>
@@ -503,11 +501,6 @@
 <!--         <use-document ref="data/fire-emblem"/> -->
       </fragment>
       <use-document ref="/fire-emblem-chat" as="chat"/>
-    </fragment>
-    <fragment name="fire-emblem-chat">
-      <param name="chat-database" value="fireemblem"/>
-      <use-template ref="//chat/xsl/shoutbox"/>
-      <use-document ref="//chat/default" as="chat"/>
     </fragment>
     <fragment name="backend-colors">
       <import ref="/default"/>
