@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pages xmlns="http://schema.slothsoft.net/farah/sites" xmlns:sfm="http://schema.slothsoft.net/farah/module">
+<domain 
+	xmlns="http://schema.slothsoft.net/farah/sites"
+	xmlns:sfd="http://schema.slothsoft.net/farah/dictionary"
+	xmlns:sfm="http://schema.slothsoft.net/farah/module"
+	name="slothsoft.net"
+	vendor="slothsoft"
+	module="slothsoft"
+	ref="home" status-active="" status-public=""
+	sfd:languages="de-de en-us">
+	
+	
 	<page name="AboutUs" ref="about-us" title="About us" status-active="" status-public=""/>
 	<page name="Shoutboxes" ref="chat-list" title="Shoutboxes" status-active="" status-public=""/>
 	<include-pages ref="sites/minecraft"/>
@@ -24,4 +34,4 @@
 	
 	
 	<include-pages ref="sites/downloads"/>
-</pages>
+</domain>
