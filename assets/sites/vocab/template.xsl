@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-	xmlns="http://schema.slothsoft.net/farah/sites"
+	xmlns="http://schema.slothsoft.net/farah/sitemap"
 	xmlns:sfm="http://schema.slothsoft.net/farah/module"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/*">
-		<pages>
+		<sitemap version="1.0">
 			<page name="Japanese" title="Japanese" ref="kana-home" status-active="" status-public="">
 				<page name="Translator" title="Translator" ref="kana-translator" status-active="" status-public=""/>
 				<page name="KanaTable" title="Hepburn Romanization" ref="kana-table" status-active="" status-public=""/>
@@ -149,7 +149,7 @@
 					-->
 				</page>
 			</page>
-		</pages>
+		</sitemap>
 	</xsl:template>
 </xsl:stylesheet>
 				

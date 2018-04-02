@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-	xmlns="http://schema.slothsoft.net/farah/sites"
+	xmlns="http://schema.slothsoft.net/farah/sitemap"
 	xmlns:sfm="http://schema.slothsoft.net/farah/module"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/*">
-		<pages>
+		<sitemap version="1.0">
 			<page name="Tales" title="Tales" module="talesof" ref="tales-home" status-active="" status-public="">
 				<page name="CraymelEditor" title="Craymel Editor" ref="craymelEditor" status-active="" status-public=""/>
 				<page name="MelnicsTable" title="MelnicsTable" ref="melnicsTable" status-active="" status-public=""/>
@@ -33,7 +33,7 @@
 			<page name="TalesOfGraces" title="Tales of Graces" redirect="/Tales" status-active="">
 				<page name="MagicCarta" title="Magic Carta List" redirect="/Tales/MagicCarta" status-active=""/>
 			</page>
-		</pages>
+		</sitemap>
 	</xsl:template>
 </xsl:stylesheet>
 				

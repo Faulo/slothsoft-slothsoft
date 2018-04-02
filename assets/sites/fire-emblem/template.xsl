@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-	xmlns="http://schema.slothsoft.net/farah/sites"
+	xmlns="http://schema.slothsoft.net/farah/sitemap"
 	xmlns:sfm="http://schema.slothsoft.net/farah/module"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/*">
-		<pages>
+		<sitemap version="1.0">
 			<page name="FireEmblem" title="Fire Emblem" ref="fire-emblem-home" status-active="" status-public="">
 				<page name="RekkaNoKen" title="Rekka No Ken" redirect="/FireEmblem/TheBlazingBlade" status-active="">
 					<sfm:param name="game" value="bs"/>
@@ -45,7 +45,7 @@
 					<page name="Relationships" title="Relationships" ref="fire-emblem-breeding" status-active="" status-public=""/>
 				</page>
 			</page>
-		</pages>
+		</sitemap>
 	</xsl:template>
 </xsl:stylesheet>
 				

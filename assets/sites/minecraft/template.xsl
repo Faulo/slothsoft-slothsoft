@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-	xmlns="http://schema.slothsoft.net/farah/sites"
+	xmlns="http://schema.slothsoft.net/farah/sitemap"
 	xmlns:sfm="http://schema.slothsoft.net/farah/module"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/*">
-		<pages>
+		<sitemap version="1.0">
 			<page name="Minecraft" ref="home" title="Minecraft" module="minecraft" status-active="" status-public="">
 				<sfm:param name="chat-duration" value="30"/>
 				<page name="News" ref="news" title="News" status-active="" status-public=""/>
@@ -28,7 +28,7 @@
 				<page name="Players" ref="players" title="Spieler" status-active="" status-public=""/>
 				<page name="Pics" ref="pics" title="Bildchen" status-active="" status-public=""/>
 			</page>
-		</pages>
+		</sitemap>
 	</xsl:template>
 </xsl:stylesheet>
 				
