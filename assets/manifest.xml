@@ -5,7 +5,7 @@
     <resource-directory name="xsl" type="application/xslt+xml"/>
     
     <resource-directory name="dictionary" type="application/xml"/>
-    <directory name="sites">    	
+    <directory name="sitemap">    	
     	<directory name="minecraft">
 			<resource use="template" name="template" type="application/xslt+xml"/>
     		<use-document ref="//slothsoft@minecraft/data/sites.log"/>
