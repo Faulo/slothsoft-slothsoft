@@ -110,30 +110,37 @@
     <fragment name="shoutboxes">
 	    <fragment name="slothsoft">
 	      <param name="chat-database" value="slothsoft"/>
+	      <param name="chat-duration" value="3650"/>
 	      <import ref="//chat/api/shoutbox"/>
 	    </fragment>
 	    <fragment name="tales">
 	      <param name="chat-database" value="tales"/>
+	      <param name="chat-duration" value="3650"/>
 	      <import ref="//chat/api/shoutbox"/>
 	    </fragment>
 	    <fragment name="amber">
 	      <param name="chat-database" value="amber"/>
+	      <param name="chat-duration" value="3650"/>
 	      <import ref="//chat/api/shoutbox"/>
 	    </fragment>
 	    <fragment name="minecraft">
 	      <param name="chat-database" value="minecraft_log"/>
+	      <param name="chat-duration" value="90"/>
 	      <import ref="//chat/api/shoutbox"/>
 	    </fragment>
 	    <fragment name="fire-emblem">
 	      <param name="chat-database" value="fireemblem"/>
+	      <param name="chat-duration" value="3650"/>
 	      <import ref="//chat/api/shoutbox"/>
 	    </fragment>
 	    <fragment name="archive">
 	      <param name="chat-database" value="archive"/>
+	      <param name="chat-duration" value="3650"/>
 	      <import ref="//chat/api/shoutbox"/>
 	    </fragment>
 	    <fragment name="vct">
 	      <param name="chat-database" value="vct"/>
+	      <param name="chat-duration" value="3650"/>
 	      <import ref="//chat/api/shoutbox"/>
 	    </fragment>
     </fragment>
