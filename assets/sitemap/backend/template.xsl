@@ -7,7 +7,7 @@
 		<sitemap version="1.0">
 			<sfm:param name="dnt" value="1" scope="global"/>
 			<page name="UserLog" title="UserLog" ref="/core/userLog" status-active="">
-				<sfm:param name="group" type="json" value='{"REQUEST_TURING":"human"}'/>
+<!-- 				<sfm:param name="group" type="json" value='{"REQUEST_TURING":"human"}'/> -->
 			</page>
 			<!--<page name="IPLog" title="IPLog" ref="/core/ipLog" status-active=""/>-->
 			<page name="Colors" title="Colors" ref="backend-colors" status-active=""/>

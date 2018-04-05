@@ -5,35 +5,35 @@
     <resource-directory name="xsl" type="application/xslt+xml"/>
     
     <resource-directory name="dictionary" type="application/xml"/>
-    <directory name="sitemap">    	
-    	<directory name="minecraft">
+    <directory name="sitemap">
+    	<resource use="template" name="template" type="application/xslt+xml"/>
+    		
+    	<directory use="document" name="minecraft">
 			<resource use="template" name="template" type="application/xslt+xml"/>
     		<use-document ref="//slothsoft@minecraft/data/sites.log"/>
     	</directory>    	
-    	<directory name="amber">
+    	<directory use="document" name="amber">
     		<resource use="template" name="template" type="application/xslt+xml"/>
     		<use-document ref="//slothsoft@amber/games/index"/>
     	</directory>    	
-    	<directory name="tales">
+    	<directory use="document" name="tales">
     		<resource use="template" name="template" type="application/xslt+xml"/>
     	</directory>
-    	<directory name="fire-emblem">
+    	<directory use="document" name="fire-emblem">
     		<resource use="template" name="template" type="application/xslt+xml"/>
     	</directory>
-    	<directory name="dragon-age">
+    	<directory use="document" name="dragon-age">
 			<resource use="template" name="template" type="application/xslt+xml"/>
     	</directory>
-    	<directory name="vocab">
+    	<directory use="document" name="vocab">
     		<resource use="template" name="template" type="application/xslt+xml"/>
     	</directory>
-    	<directory name="downloads">
+    	<directory use="document" name="downloads">
     		<resource use="template" name="template" type="application/xslt+xml"/>
     	</directory>
-    	<directory name="backend">
+    	<directory use="document" name="backend">
     		<resource use="template" name="template" type="application/xslt+xml"/>
     	</directory>
-    	
-    	<resource name="slothsoft.net" type="application/xml"/>
     </directory>
     
     
