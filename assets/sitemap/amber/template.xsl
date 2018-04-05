@@ -11,13 +11,13 @@
 	
 	<xsl:template match="game">
 		<xsl:variable name="game" select="@name"/>
-		<page name="{@title}" ref="{$game}/description"
+		<page name="{@title}" ref="pages/{$game}/description"
 			status-active="" status-public="">
 			<sfm:param name="game" value="{$game}" />
 			
-			<page name="EditorHelp" ref="{$game}/description"
+			<page name="EditorHelp" ref="pages/{$game}/description"
 				status-active="" status-public="" />
-			<page name="Downloads" ref="{$game}/description" status-active="" status-public=""/>
+			<page name="Downloads" ref="pages/{$game}/description" status-active="" status-public=""/>
 			
 			<xsl:apply-templates select="mod"/>
 			
@@ -41,62 +41,62 @@
 	
 	<xsl:template match="mod">
 		<xsl:variable name="game" select="../@name"/>
-		<page name="{@name}" ref="{$game}/description"
+		<page name="{@name}" ref="pages/{$game}/description"
 			status-active="">
 			<xsl:if test="not(@hidden)">
 				<xsl:attribute name="status-public"/>
 			</xsl:if>
 			<sfm:param name="mod" value="{@name}" />
-			<page name="SaveEditor" title="SavegameEditor" ref="{$game}/editor"
+			<page name="SaveEditor" title="SavegameEditor" ref="pages/{$game}/editor"
 				status-active="" status-public="">
 				<sfm:param name="preset" value="saveEditor" />
 			</page>
-			<page name="GameEditor" title="GameEditor" ref="{$game}/editor"
+			<page name="GameEditor" title="GameEditor" ref="pages/{$game}/editor"
 				status-active="" >
 				<sfm:param name="preset" value="gameEditor" />
 			</page>
-			<page name="GameData" title="GameData" ref="{$game}/description" status-active="" status-public="">			
-				<page name="ItemList" title="ItemList" ref="{$game}/resource"
+			<page name="GameData" title="GameData" ref="pages/{$game}/description" status-active="" status-public="">			
+				<page name="ItemList" title="ItemList" ref="pages/{$game}/resource"
 					status-active="" status-public="">
 					<sfm:param name="id" value="items" />
 				</page>
-				<page name="PCList" title="PCList" ref="{$game}/resource"
+				<page name="PCList" title="PCList" ref="pages/{$game}/resource"
 					status-active="" status-public="">
 					<sfm:param name="id" value="pcs" />
 				</page>
-				<page name="NPCList" title="NPCList" ref="{$game}/resource"
+				<page name="NPCList" title="NPCList" ref="pages/{$game}/resource"
 					status-active="" status-public="">
 					<sfm:param name="id" value="npcs" />
 				</page>
-				<page name="MonsterList" title="MonsterList" ref="{$game}/resource"
+				<page name="MonsterList" title="MonsterList" ref="pages/{$game}/resource"
 					status-active="" status-public="">
 					<sfm:param name="id" value="monsters" />
 				</page>
-				<page name="ClassList" title="ClassList" ref="{$game}/resource"
+				<page name="ClassList" title="ClassList" ref="pages/{$game}/resource"
 					status-active="" status-public="">
 					<sfm:param name="id" value="classes" />
 				</page>
-				<page name="PortraitList" title="PortraitList" ref="{$game}/resource"
+				<page name="PortraitList" title="PortraitList" ref="pages/{$game}/resource"
 					status-active="" status-public="">
 					<sfm:param name="id" value="portraits" />
 				</page>
-				<page name="Maps2D" title="Maps2D" ref="{$game}/resource"
+				<page name="Maps2D" title="Maps2D" ref="pages/{$game}/resource"
 					status-active="" status-public="">
 					<sfm:param name="id" value="maps.2d" />
 				</page>
-				<page name="Maps3D" title="Maps3D" ref="{$game}/resource"
+				<page name="Maps3D" title="Maps3D" ref="pages/{$game}/resource"
 					status-active="" status-public="">
 					<sfm:param name="id" value="maps.3d" />
 				</page>
-				<page name="WorldmapLyramion" title="WorldmapLyramion" ref="{$game}/resource"
+				<page name="WorldmapLyramion" title="WorldmapLyramion" ref="pages/{$game}/resource"
 					status-active="" >
 					<sfm:param name="id" value="worldmap.lyramion" />
 				</page>
-				<page name="WorldmapKire" title="WorldKire" ref="{$game}/resource"
+				<page name="WorldmapKire" title="WorldKire" ref="pages/{$game}/resource"
 					status-active="" status-public="">
 					<sfm:param name="id" value="worldmap.kire" />
 				</page>
-				<page name="WorldmapMorag" title="WorldmapMorag" ref="{$game}/resource"
+				<page name="WorldmapMorag" title="WorldmapMorag" ref="pages/{$game}/resource"
 					status-active="" status-public="">
 					<sfm:param name="id" value="worldmap.morag" />
 				</page>

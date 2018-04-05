@@ -5,8 +5,8 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/*">
 		<sitemap version="1.0">
-			<page name="DragonAge" title="DragonAge" ref="dragon-age/home" status-active="" status-public="">
-				<page name="InquisitionCombos" title="InquisitionCombos" ref="dragon-age/combos" status-active="" status-public=""/>
+			<page name="DragonAge" title="DragonAge" ref="pages/dragon-age/home" status-active="" status-public="">
+				<page name="InquisitionCombos" title="InquisitionCombos" ref="pages/dragon-age/combos" status-active="" status-public=""/>
 			</page>
 		</sitemap>
 	</xsl:template>

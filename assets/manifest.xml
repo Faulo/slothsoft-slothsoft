@@ -120,7 +120,11 @@
 	      <param name="chat-database" value="amber"/>
 	      <import ref="//chat/api/shoutbox"/>
 	    </fragment>
-	    <fragment name="fireemblem">
+	    <fragment name="minecraft">
+	      <param name="chat-database" value="minecraft_log"/>
+	      <import ref="//chat/api/shoutbox"/>
+	    </fragment>
+	    <fragment name="fire-emblem">
 	      <param name="chat-database" value="fireemblem"/>
 	      <import ref="//chat/api/shoutbox"/>
 	    </fragment>
@@ -163,7 +167,7 @@
 	    	</fragment>
 	    	<fragment name="combos">
 		      <import ref="default"/>
-		      <use-document ref="//dragonage/html/inquisition/combos" as="content"/>
+		      <use-document ref="//dragonage/html/combos" as="content"/>
 	    	</fragment>
 	    </fragment>
 	    
@@ -228,11 +232,11 @@
       <fragment name="content" use="document">
         <use-template ref="xsl/home"/>
       </fragment>
-      <use-document ref="slothsoft-chat" as="chat"/>
+      <use-document ref="shoutboxes/slothsoft" as="chat"/>
     </fragment>
     <fragment name="about-us">
       <import ref="default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/about-us"/>
         <use-document ref="//farah/request"/>
         <use-document ref="static/staff-content"/>
@@ -240,18 +244,18 @@
     </fragment>
     <fragment name="chat-list">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/chat-list"/>
-        <use-document ref="slothsoft-chat" as="chat"/>
-        <use-document ref="//minecraft/chat" as="chat"/>
-        <use-document ref="ambermoon/shoutbox" as="chat"/>
-        <use-document ref="//talesof/chat" as="chat"/>
-        <use-document ref="fire-emblem-chat" as="chat"/>
+        <use-document ref="shoutboxes/slothsoft" as="chat"/>
+        <use-document ref="shoutboxes/minecraft" as="chat"/>
+        <use-document ref="shoutboxes/amber" as="chat"/>
+        <use-document ref="shoutboxes/tales" as="chat"/>
+        <use-document ref="shoutboxes/fire-emblem" as="chat"/>
       </fragment>
     </fragment>
     <fragment name="imprint">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/address"/>
         <use-document ref="static/owner"/>
       </fragment>
@@ -285,7 +289,7 @@
       <link-stylesheet ref="css/archive"/>
       <import ref="//sse/api/client"/>
       <link-script ref="js/Unison"/>
-      <use-document ref="/archive-chat" as="chat"/>
+      <use-document ref="shoutboxes/archive" as="chat"/>
       <import ref="//core/api/HTML5"/>
     </fragment>
     <fragment name="archive-hentai">
@@ -308,7 +312,7 @@
     </fragment>
     <fragment name="unicode-mapper">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <import ref="//core/api/DOM"/>
         <link-script ref="js/UnicodeMapper"/>
         <use-template ref="xsl/unicode-mapper"/>
@@ -316,14 +320,14 @@
     </fragment>
     <fragment name="kana-home">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-document ref="//farah/sites"/>
         <use-template ref="xsl/kana-home"/>
       </fragment>
     </fragment>
     <fragment name="kana-table">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/kana"/>
         <link-stylesheet ref="css/kana"/>
         <use-document ref="static/kana"/>
@@ -331,7 +335,7 @@
     </fragment>
     <fragment name="kana-translator">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/kana-translator"/>
         <link-stylesheet ref="css/kana"/>
         <import ref="//core/api/DOM"/>
@@ -341,7 +345,7 @@
     </fragment>
     <fragment name="kana-test">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/kana-test"/>
         <!-- <use-document ref="data/kana.test"/> -->
         <link-stylesheet ref="css/kana"/>
@@ -350,7 +354,7 @@
     </fragment>
     <fragment name="kana-vocab">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/kana-vocab"/>
         <!-- <use-document ref="data/kana.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
@@ -366,7 +370,7 @@
       <link-stylesheet ref="css/default"/>
       <link-stylesheet ref="css/colors"/>
       <link-stylesheet ref="css/layout"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/kana-vocab"/>
         <!--  <use-document ref="data/kana.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
@@ -387,7 +391,7 @@
     </fragment>
     <fragment name="vocab-list-add">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/vocab-list-add"/>
         <!-- <use-document ref="data/kana.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
@@ -397,7 +401,7 @@
     </fragment>
     <fragment name="vocab-kanji">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/vocab-kanji"/>
         <!-- <use-document ref="data/vocab.kanji"/> -->
         <link-stylesheet ref="css/kana"/>
@@ -413,7 +417,7 @@
       <link-stylesheet ref="css/default"/>
       <link-stylesheet ref="css/colors"/>
       <link-stylesheet ref="css/layout"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/vocab-kanji"/>
         <!-- <use-document ref="data/vocab.kanji"/> -->
         <link-stylesheet ref="css/kana"/>
@@ -426,7 +430,7 @@
     </fragment>
     <fragment name="vocab-words-test">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/vocab.test"/>
         <!-- <use-document ref="data/kana.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
@@ -438,7 +442,7 @@
     </fragment>
     <fragment name="vocab-kanji-test">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/vocab.test"/>
         <!-- <use-document ref="data/vocab.kanji"/> -->
         <link-stylesheet ref="css/kana"/>
@@ -450,7 +454,7 @@
     </fragment>
     <fragment name="vocab-verbs">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/vocab-grammar"/>
         <!-- <use-document ref="data/vocab-grammar-verbs"/> -->
         <link-stylesheet ref="css/kana"/>
@@ -460,7 +464,7 @@
     </fragment>
     <fragment name="vocab-verbs-old">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/vocab-grammar"/>
         <use-document ref="static/japanese-faulo-verbs"/>
         <link-stylesheet ref="css/kana"/>
@@ -470,7 +474,7 @@
     </fragment>
     <fragment name="english-vocab">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/english-vocab"/>
         <!-- <use-document ref="data/english.vocab"/> -->
         <link-stylesheet ref="css/kana"/>
@@ -480,32 +484,32 @@
     </fragment>
     <fragment name="fire-emblem-home">
       <import ref="default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/fire-emblem-home"/>
       </fragment>
-      <use-document ref="fire-emblem-chat" as="chat"/>
+      <use-document ref="shoutboxes/fire-emblem" as="chat"/>
     </fragment>
     <fragment name="fire-emblem-breeding">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/fire-emblem-breeding"/>
         <!-- <use-document ref="data/fire-emblem"/> -->
         <link-script ref="js/FireEmblem"/>
       </fragment>
-      <use-document ref="/fire-emblem-chat" as="chat"/>
+      <use-document ref="shoutboxes/fire-emblem" as="chat"/>
     </fragment>
     <fragment name="fire-emblem-cast">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/fire-emblem-cast"/>
 <!--         <use-document ref="data/fire-emblem"/> -->
       </fragment>
-      <use-document ref="/fire-emblem-chat" as="chat"/>
+      <use-document ref="shoutboxes/fire-emblem" as="chat"/>
     </fragment>
     <fragment name="backend-colors">
       <import ref="/default"/>
       <use-document ref="//minecraft/status" as="status"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/backend.colors"/>
         <link-script ref="js/CSS"/>
         <import ref="//core/api/DOM"/>
@@ -519,13 +523,13 @@
     </fragment>
     <fragment name="heartbeat-for-all">
       <import ref="/default"/>
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/heartbeat-for-all"/>
       </fragment>
-      <use-document ref="/slothsoft-chat" as="chat"/>
+      <use-document ref="shoutboxes/slothsoft" as="chat"/>
     </fragment>
     <fragment name="heartbeat-for-all.game">
-      <fragment name="content">
+      <fragment name="content" use="document">
         <use-template ref="xsl/heartbeat-for-all.game"/>
       </fragment>
       <import ref="/default"/>
