@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
 	xmlns="http://schema.slothsoft.net/farah/sitemap"
+	xmlns:sfs="http://schema.slothsoft.net/farah/sitemap"
+	xmlns:sfd="http://schema.slothsoft.net/farah/dictionary"
 	xmlns:sfm="http://schema.slothsoft.net/farah/module"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/*">
 		<sitemap version="1.0">
-			<page name="Minecraft" ref="home" title="Minecraft" module="minecraft" status-active="" status-public="">
+			<page name="Minecraft" ref="//slothsoft@slothsoft/pages/minecraft/home" title="Minecraft" module="minecraft" status-active="" status-public="">
 				<sfm:param name="chat-duration" value="30"/>
 				<page name="News" ref="news" title="News" status-active="" status-public=""/>
 				<page name="Chat" ref="shoutbox" title="Chat" status-active="" status-public="">
 					<sfm:param name="chat-duration" value="90"/>
 				</page>
 				<page name="Log" ref="log" title="Server-Log" status-active="" status-public="">
-					<xsl:copy-of select="*[@name='sites.log']"/>
+					<xsl:copy-of select="*[@name='sites.log']/sfs:sitemap/sfs:page"/>
 				</page>
 				<page name="Infos" ref="infos" title="Server-Informationen" status-active="" status-public=""/>
 				<page name="Law" ref="law" title="Regeln" status-active="" status-public=""/>
