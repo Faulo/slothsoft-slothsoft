@@ -11,6 +11,7 @@
 		<project>slothsoft-minecraft</project>
 		<project>slothsoft-sse</project>
 		<project>slothsoft-talesof</project>
+		<project>slothsoft-whatthehell</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
