@@ -13,7 +13,7 @@
 				<page name="Chat" ref="shoutbox" title="Chat" status-active="" status-public="">
 					<sfm:param name="chat-duration" value="90"/>
 				</page>
-				<page name="Log" ref="log" title="Server-Log" status-active="" status-public="">
+				<page name="Log" ref="//slothsoft@slothsoft/pages/minecraft/log" title="Server-Log" status-active="" status-public="">
 					<xsl:copy-of select="*[@name='sites.log']/sfs:sitemap/sfs:page"/>
 				</page>
 				<page name="Infos" ref="infos" title="Server-Informationen" status-active="" status-public=""/>
